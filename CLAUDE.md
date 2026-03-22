@@ -56,10 +56,12 @@ Claude Code → 自動同步 → Git → GitHub
 ### 結構
 ```
 /skills-library/
-├── SKILLS-REGISTRY.md      # Skills 列表
-├── cowork/
-├── code/
-└── 10web/
+├── SKILLS-REGISTRY.md      # Skills 列表 (16 Skills)
+├── PROMPT_LIBRARY_SUMMARY.md
+├── cowork/                 # 8 Cowork Custom Skills
+├── code/                   # 3 Code Custom Skills
+├── templates/              # 5 Generic File Processing Skills
+└── outputs/                # 輸出佔位
 ```
 
 ### 使用方式
@@ -94,10 +96,12 @@ cd ~/code/AI-Catalyst-HK-sync && git log --oneline
 - ✅ 所有系統已自動化，無需手動
 - ✅ iCloud 中的原始資料保持同步
 - ✅ GitHub 有完整備份
+- ✅ Cron Jobs 已裝：auto-sync.sh (5分鐘), combined-sync.sh (10分鐘)
+- ✅ Skills Library 完整：16 Skills across cowork/, code/, templates/
 - ⚠️ 定期檢查 `/databases/` 確保同步正常
 
 ## 👤 維護者
 - Franco So (franco_so_2026)
 
 ## 📅 最後更新
-- 2026-03-22 18:30
+- 2026-03-22 19:00
