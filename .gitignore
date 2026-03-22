@@ -1,0 +1,6 @@
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Logs (auto-generated, no need to track)
+*.log
