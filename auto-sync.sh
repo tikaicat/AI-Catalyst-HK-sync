@@ -22,7 +22,7 @@ if [ -f ~/.last-github-push ]; then
   LAST_PUSH=$(cat ~/.last-github-push)
   CURRENT_TIME=$(date +%s)
   DIFF=$((CURRENT_TIME - LAST_PUSH))
-  if [ $DIFF -gt 86400 ]; then  # 24 hours
+  if [ $DIFF -gt 3600 ]; then  # 1 hour
     git push origin main 2>/dev/null && echo "✓ Pushed to GitHub backup"
     date +%s > ~/.last-github-push
   fi
