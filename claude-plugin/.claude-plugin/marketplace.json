@@ -1,0 +1,17 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "ai-catalyst-hk",
+  "description": "AI Catalyst HK custom skills for Claude Code - MCP building, n8n automation, AI tool review, and file processing",
+  "owner": {
+    "name": "Franco So",
+    "email": "franco_so_2026"
+  },
+  "plugins": [
+    {
+      "name": "ai-catalyst-hk",
+      "description": "AI Catalyst HK skills: ach-mcp-builder, n8n-workflow-generator, ai-tool-review, generic-docx, generic-pdf, generic-pptx, generic-xlsx, generic-schedule",
+      "source": "./plugins/ai-catalyst-hk",
+      "category": "productivity"
+    }
+  ]
+}

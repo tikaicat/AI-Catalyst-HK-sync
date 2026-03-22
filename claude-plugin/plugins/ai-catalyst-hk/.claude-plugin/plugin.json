@@ -1,0 +1,8 @@
+{
+  "name": "ai-catalyst-hk",
+  "description": "AI Catalyst HK custom skills for MCP building, n8n automation, AI tool review, and file processing (docx, pdf, pptx, xlsx, schedule).",
+  "author": {
+    "name": "Franco So",
+    "email": "franco_so_2026"
+  }
+}
