@@ -1,0 +1,477 @@
+<!-- 
+  AI Catalyst HK 工具評分卡
+  用途：10Web WordPress Custom HTML Block
+  功能：AI 工具評測文章頂部的評分摘要卡
+  版本：1.0
+-->
+
+<style>
+/* AI Catalyst HK 品牌變數 */
+:root {
+  --ach-primary: #0D47A1;
+  --ach-accent: #F59E0B;
+  --ach-white: #FFFFFF;
+  --ach-text: #1F2937;
+  --ach-muted: #F3F4F6;
+  --ach-success: #10B981;
+  --ach-border: #E5E7EB;
+}
+
+/* 評分卡容器 */
+.ach-rating-card {
+  font-family: 'Noto Sans TC', 'Inter', -apple-system, sans-serif;
+  background: var(--ach-white);
+  border: 1px solid var(--ach-border);
+  border-radius: 16px;
+  padding: 32px;
+  margin: 32px 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* 頂部區域 */
+.ach-rating-card__header {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.ach-rating-card__logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 16px;
+  object-fit: contain;
+  background: var(--ach-muted);
+  padding: 8px;
+  flex-shrink: 0;
+}
+
+.ach-rating-card__info {
+  flex: 1;
+  min-width: 200px;
+}
+
+.ach-rating-card__title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 8px 0;
+}
+
+.ach-rating-card__name {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--ach-primary);
+  margin: 0;
+}
+
+.ach-rating-card__badge {
+  background: var(--ach-accent);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.ach-rating-card__tagline {
+  color: #6B7280;
+  font-size: 16px;
+  margin: 0 0 12px 0;
+}
+
+.ach-rating-card__meta {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.ach-rating-card__meta-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: var(--ach-text);
+}
+
+.ach-rating-card__meta-icon {
+  color: var(--ach-accent);
+}
+
+/* 總評分區域 */
+.ach-rating-card__score {
+  text-align: center;
+  padding: 24px;
+  background: linear-gradient(135deg, var(--ach-primary) 0%, #1565C0 100%);
+  border-radius: 16px;
+  min-width: 140px;
+}
+
+.ach-rating-card__score-value {
+  font-size: 56px;
+  font-weight: 700;
+  color: white;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.ach-rating-card__score-max {
+  font-size: 20px;
+  opacity: 0.8;
+}
+
+.ach-rating-card__score-label {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* 分項評分 */
+.ach-rating-card__ratings {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--ach-border);
+}
+
+.ach-rating-card__rating-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ach-rating-card__rating-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ach-rating-card__rating-label {
+  font-size: 14px;
+  color: var(--ach-text);
+  font-weight: 500;
+}
+
+.ach-rating-card__rating-value {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ach-primary);
+}
+
+.ach-rating-card__rating-bar {
+  height: 8px;
+  background: var(--ach-muted);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.ach-rating-card__rating-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--ach-primary) 0%, var(--ach-accent) 100%);
+  border-radius: 4px;
+  transition: width 0.5s ease;
+}
+
+/* 適合/不適合區域 */
+.ach-rating-card__fit {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  margin-bottom: 24px;
+  padding: 24px;
+  background: var(--ach-muted);
+  border-radius: 12px;
+}
+
+.ach-rating-card__fit-section h4 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 12px 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.ach-rating-card__fit-section--yes h4 {
+  color: var(--ach-success);
+}
+
+.ach-rating-card__fit-section--no h4 {
+  color: #EF4444;
+}
+
+.ach-rating-card__fit-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ach-rating-card__fit-list li {
+  padding: 8px 0;
+  font-size: 14px;
+  color: var(--ach-text);
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.ach-rating-card__fit-list li::before {
+  content: '•';
+  color: #9CA3AF;
+}
+
+/* CTA 區域 */
+.ach-rating-card__cta {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-top: 24px;
+  border-top: 1px solid var(--ach-border);
+}
+
+.ach-rating-card__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.ach-rating-card__btn--primary {
+  background: var(--ach-accent);
+  color: white;
+  border: none;
+}
+
+.ach-rating-card__btn--primary:hover {
+  background: #D97706;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
+}
+
+.ach-rating-card__btn--secondary {
+  background: transparent;
+  color: var(--ach-primary);
+  border: 2px solid var(--ach-primary);
+}
+
+.ach-rating-card__btn--secondary:hover {
+  background: var(--ach-primary);
+  color: white;
+}
+
+.ach-rating-card__affiliate-note {
+  font-size: 12px;
+  color: #9CA3AF;
+  margin-left: auto;
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+  .ach-rating-card {
+    padding: 24px 20px;
+  }
+  
+  .ach-rating-card__header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .ach-rating-card__meta {
+    justify-content: center;
+  }
+  
+  .ach-rating-card__score {
+    width: 100%;
+  }
+  
+  .ach-rating-card__name {
+    font-size: 24px;
+  }
+  
+  .ach-rating-card__cta {
+    flex-direction: column;
+  }
+  
+  .ach-rating-card__btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .ach-rating-card__affiliate-note {
+    margin-left: 0;
+    text-align: center;
+  }
+}
+</style>
+
+<div class="ach-rating-card" id="achRatingCard">
+  <!-- 由 JavaScript 生成內容 -->
+</div>
+
+<script>
+// 工具資料 - 根據你的 WordPress ACF 欄位更新
+const toolData = {
+  // 基本資訊
+  name: "Claude Pro",
+  tagline: "最強大的 AI 助手，繁中支援出色",
+  logo: "https://claude.ai/favicon.ico",
+  badge: "編輯推薦",
+  
+  // 定價
+  startingPriceHKD: "HKD 156/月",
+  hasFreeplan: true,
+  
+  // 評分（1-5分）
+  overallRating: 4.9,
+  ratings: {
+    ease: { label: "易用程度", score: 4.8 },
+    tcSupport: { label: "繁中支援", score: 4.9 },
+    hkPrice: { label: "香港定價", score: 4.5 },
+    support: { label: "客服支援", score: 4.7 }
+  },
+  
+  // 適合/不適合
+  bestFor: [
+    "需要高品質繁中輸出的內容創作者",
+    "需要長文分析和報告撰寫的專業人士",
+    "希望處理複雜任務的中小企業主"
+  ],
+  notSuitableFor: [
+    "只需要簡單聊天功能的用戶",
+    "預算極度有限的個人用戶",
+    "需要即時圖像生成功能的設計師"
+  ],
+  
+  // 連結
+  affiliateUrl: "https://claude.ai?ref=aicatalysthk",
+  officialUrl: "https://claude.ai",
+  hasAffiliate: true
+};
+
+// 渲染評分卡
+function renderRatingCard(tool) {
+  const card = document.getElementById('achRatingCard');
+  
+  card.innerHTML = `
+    <div class="ach-rating-card__header">
+      <img src="${tool.logo}" alt="${tool.name} Logo" class="ach-rating-card__logo" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 80 80%22><rect fill=%22%23F3F4F6%22 width=%2280%22 height=%2280%22 rx=%2216%22/><text x=%2240%22 y=%2250%22 text-anchor=%22middle%22 font-size=%2232%22>🤖</text></svg>'">
+      
+      <div class="ach-rating-card__info">
+        <div class="ach-rating-card__title">
+          <h2 class="ach-rating-card__name">${tool.name}</h2>
+          ${tool.badge ? `<span class="ach-rating-card__badge">⭐ ${tool.badge}</span>` : ''}
+        </div>
+        <p class="ach-rating-card__tagline">${tool.tagline}</p>
+        <div class="ach-rating-card__meta">
+          <span class="ach-rating-card__meta-item">
+            <span class="ach-rating-card__meta-icon">💰</span>
+            ${tool.startingPriceHKD}
+          </span>
+          <span class="ach-rating-card__meta-item">
+            <span class="ach-rating-card__meta-icon">${tool.hasFreeplan ? '✅' : '❌'}</span>
+            ${tool.hasFreeplan ? '有免費版' : '無免費版'}
+          </span>
+        </div>
+      </div>
+      
+      <div class="ach-rating-card__score">
+        <div class="ach-rating-card__score-value">
+          ${tool.overallRating}<span class="ach-rating-card__score-max">/5</span>
+        </div>
+        <div class="ach-rating-card__score-label">總體評分</div>
+      </div>
+    </div>
+    
+    <div class="ach-rating-card__ratings">
+      ${Object.entries(tool.ratings).map(([key, data]) => `
+        <div class="ach-rating-card__rating-item">
+          <div class="ach-rating-card__rating-header">
+            <span class="ach-rating-card__rating-label">${data.label}</span>
+            <span class="ach-rating-card__rating-value">${data.score}/5</span>
+          </div>
+          <div class="ach-rating-card__rating-bar">
+            <div class="ach-rating-card__rating-fill" style="width: ${(data.score / 5) * 100}%"></div>
+          </div>
+        </div>
+      `).join('')}
+    </div>
+    
+    <div class="ach-rating-card__fit">
+      <div class="ach-rating-card__fit-section ach-rating-card__fit-section--yes">
+        <h4>✅ 最適合</h4>
+        <ul class="ach-rating-card__fit-list">
+          ${tool.bestFor.map(item => `<li>${item}</li>`).join('')}
+        </ul>
+      </div>
+      <div class="ach-rating-card__fit-section ach-rating-card__fit-section--no">
+        <h4>⚠️ 不太適合</h4>
+        <ul class="ach-rating-card__fit-list">
+          ${tool.notSuitableFor.map(item => `<li>${item}</li>`).join('')}
+        </ul>
+      </div>
+    </div>
+    
+    <div class="ach-rating-card__cta">
+      ${tool.hasAffiliate && tool.affiliateUrl 
+        ? `<a href="${tool.affiliateUrl}" class="ach-rating-card__btn ach-rating-card__btn--primary" target="_blank" rel="nofollow sponsored">
+            免費試用 ${tool.name} →
+          </a>`
+        : `<a href="${tool.officialUrl}" class="ach-rating-card__btn ach-rating-card__btn--primary" target="_blank" rel="noopener">
+            前往官網 →
+          </a>`}
+      <a href="#full-review" class="ach-rating-card__btn ach-rating-card__btn--secondary">
+        閱讀完整評測 ↓
+      </a>
+      ${tool.hasAffiliate ? `<span class="ach-rating-card__affiliate-note">*（聯盟連結）</span>` : ''}
+    </div>
+  `;
+}
+
+// 初始化
+document.addEventListener('DOMContentLoaded', function() {
+  renderRatingCard(toolData);
+});
+
+// 如果 DOMContentLoaded 已觸發
+if (document.readyState !== 'loading') {
+  renderRatingCard(toolData);
+}
+</script>
+
+<!-- 
+  使用說明：
+  
+  1. 更新工具資料：
+     - 修改 toolData 物件中的資訊
+     - 評分使用 1-5 分制
+     - hasAffiliate: true = 有聯盟連結
+  
+  2. 與 WordPress ACF 整合：
+     - 如使用 ACF，可用 PHP 輸出 JSON 替換 toolData
+     - 例如：const toolData = <?php echo json_encode($acf_fields); ?>;
+  
+  3. 10Web 使用方法：
+     - 在評測文章頂部加入 Custom HTML Block
+     - 貼上此完整代碼
+     - 修改 toolData 為該工具的資訊
+  
+  4. 每篇評測文章需要的修改：
+     - name: 工具名稱
+     - tagline: 一句話介紹
+     - logo: 工具 Logo URL
+     - startingPriceHKD: 起步月費
+     - ratings: 各項評分
+     - bestFor/notSuitableFor: 適合/不適合列表
+     - affiliateUrl: 聯盟連結（如有）
+-->

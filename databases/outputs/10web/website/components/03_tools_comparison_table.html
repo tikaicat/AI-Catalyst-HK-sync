@@ -1,0 +1,601 @@
+<!-- 
+  AI Catalyst HK 工具比較表格
+  用途：10Web WordPress Custom HTML Block
+  功能：可篩選（有佣金/無佣金）、可排序、響應式
+  版本：1.0
+-->
+
+<style>
+/* AI Catalyst HK 品牌變數 */
+:root {
+  --ach-primary: #0D47A1;
+  --ach-accent: #F59E0B;
+  --ach-white: #FFFFFF;
+  --ach-text: #1F2937;
+  --ach-muted: #F3F4F6;
+  --ach-success: #10B981;
+  --ach-border: #E5E7EB;
+}
+
+/* 比較表格容器 */
+.ach-tools-section {
+  font-family: 'Noto Sans TC', 'Inter', -apple-system, sans-serif;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 16px;
+}
+
+.ach-tools-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.ach-tools-header__title {
+  color: var(--ach-primary);
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+}
+
+.ach-tools-header__subtitle {
+  color: #6B7280;
+  font-size: 16px;
+  margin: 0;
+}
+
+/* 篩選按鈕組 */
+.ach-filter-group {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.ach-filter-btn {
+  padding: 10px 24px;
+  border: 2px solid var(--ach-border);
+  border-radius: 8px;
+  background: var(--ach-white);
+  color: var(--ach-text);
+  font-size: 14px;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.ach-filter-btn:hover {
+  border-color: var(--ach-primary);
+  color: var(--ach-primary);
+}
+
+.ach-filter-btn.active {
+  background: var(--ach-primary);
+  border-color: var(--ach-primary);
+  color: var(--ach-white);
+}
+
+.ach-filter-btn__count {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  margin-left: 8px;
+}
+
+.ach-filter-btn.active .ach-filter-btn__count {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* 表格容器 */
+.ach-table-wrapper {
+  overflow-x: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.ach-tools-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 800px;
+}
+
+.ach-tools-table thead {
+  background: var(--ach-primary);
+}
+
+.ach-tools-table th {
+  color: var(--ach-white);
+  padding: 16px;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.ach-tools-table th:first-child {
+  border-radius: 12px 0 0 0;
+}
+
+.ach-tools-table th:last-child {
+  border-radius: 0 12px 0 0;
+}
+
+.ach-tools-table tbody tr {
+  background: var(--ach-white);
+  border-bottom: 1px solid var(--ach-border);
+  transition: background 0.2s ease;
+}
+
+.ach-tools-table tbody tr:hover {
+  background: #F9FAFB;
+}
+
+.ach-tools-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.ach-tools-table td {
+  padding: 16px;
+  font-size: 14px;
+  color: var(--ach-text);
+  vertical-align: middle;
+}
+
+/* 工具名稱欄 */
+.ach-tool-name {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ach-tool-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  object-fit: contain;
+  background: var(--ach-muted);
+  padding: 4px;
+}
+
+.ach-tool-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.ach-tool-info__name {
+  font-weight: 600;
+  color: var(--ach-primary);
+}
+
+.ach-tool-info__category {
+  font-size: 12px;
+  color: #6B7280;
+}
+
+/* 標籤 */
+.ach-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.ach-badge--commission {
+  background: #D1FAE5;
+  color: #065F46;
+}
+
+.ach-badge--no-commission {
+  background: var(--ach-muted);
+  color: #6B7280;
+}
+
+.ach-badge--free {
+  background: #DBEAFE;
+  color: #1E40AF;
+}
+
+/* 評分星級 */
+.ach-rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.ach-rating__stars {
+  color: var(--ach-accent);
+  font-size: 16px;
+}
+
+.ach-rating__score {
+  font-weight: 600;
+  margin-left: 4px;
+}
+
+/* 佣金欄 */
+.ach-commission {
+  font-weight: 600;
+  color: var(--ach-success);
+}
+
+.ach-commission--none {
+  color: #9CA3AF;
+  font-weight: 400;
+}
+
+/* CTA 按鈕 */
+.ach-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background: var(--ach-accent);
+  color: var(--ach-white);
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.ach-cta-btn:hover {
+  background: #D97706;
+  transform: translateY(-1px);
+}
+
+.ach-cta-btn--secondary {
+  background: transparent;
+  border: 2px solid var(--ach-primary);
+  color: var(--ach-primary);
+}
+
+.ach-cta-btn--secondary:hover {
+  background: var(--ach-primary);
+  color: var(--ach-white);
+}
+
+/* 空狀態 */
+.ach-empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: #6B7280;
+}
+
+.ach-empty-state__icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+/* 隱藏行 */
+.ach-hidden {
+  display: none;
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+  .ach-tools-header__title {
+    font-size: 24px;
+  }
+  
+  .ach-filter-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .ach-filter-btn {
+    text-align: center;
+  }
+}
+</style>
+
+<div class="ach-tools-section">
+  <div class="ach-tools-header">
+    <h2 class="ach-tools-header__title">香港中小企 AI 工具推薦</h2>
+    <p class="ach-tools-header__subtitle">精選工具，助你提升業務效率</p>
+  </div>
+  
+  <!-- 篩選按鈕 -->
+  <div class="ach-filter-group">
+    <button class="ach-filter-btn active" data-filter="all" onclick="filterTools('all')">
+      全部工具
+      <span class="ach-filter-btn__count" id="countAll">0</span>
+    </button>
+    <button class="ach-filter-btn" data-filter="commission" onclick="filterTools('commission')">
+      💰 有佣金聯盟
+      <span class="ach-filter-btn__count" id="countCommission">0</span>
+    </button>
+    <button class="ach-filter-btn" data-filter="no-commission" onclick="filterTools('no-commission')">
+      📌 自然推薦
+      <span class="ach-filter-btn__count" id="countNoCommission">0</span>
+    </button>
+  </div>
+  
+  <!-- 工具表格 -->
+  <div class="ach-table-wrapper">
+    <table class="ach-tools-table">
+      <thead>
+        <tr>
+          <th>工具名稱</th>
+          <th>月費 (HKD)</th>
+          <th>免費方案</th>
+          <th>佣金</th>
+          <th>評分</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tbody id="toolsTableBody">
+        <!-- 工具列會由 JavaScript 生成 -->
+      </tbody>
+    </table>
+  </div>
+  
+  <div class="ach-empty-state ach-hidden" id="emptyState">
+    <div class="ach-empty-state__icon">🔍</div>
+    <p>沒有符合篩選條件的工具</p>
+  </div>
+</div>
+
+<script>
+// AI 工具數據 - 根據你的 04__AI_Tools_HK_SMEs_Comparison.md 更新
+const aiTools = [
+  // === 有佣金聯盟工具 ===
+  {
+    name: "Claude Pro",
+    category: "AI 聊天機器人",
+    logo: "https://claude.ai/favicon.ico",
+    priceHKD: "HKD 156/月",
+    freePlan: true,
+    hasCommission: true,
+    commission: "20%",
+    cookieDays: 30,
+    rating: 4.9,
+    affiliateUrl: "https://claude.ai?ref=aicatalysthk",
+    officialUrl: "https://claude.ai"
+  },
+  {
+    name: "Jasper AI",
+    category: "AI 寫作",
+    logo: "https://www.jasper.ai/favicon.ico",
+    priceHKD: "HKD 390/月",
+    freePlan: false,
+    hasCommission: true,
+    commission: "30%",
+    cookieDays: 60,
+    rating: 4.5,
+    affiliateUrl: "https://jasper.ai?ref=aicatalysthk",
+    officialUrl: "https://jasper.ai"
+  },
+  {
+    name: "Copy.ai",
+    category: "AI 寫作",
+    logo: "https://www.copy.ai/favicon.ico",
+    priceHKD: "HKD 290/月",
+    freePlan: true,
+    hasCommission: true,
+    commission: "25%",
+    cookieDays: 45,
+    rating: 4.3,
+    affiliateUrl: "https://copy.ai?ref=aicatalysthk",
+    officialUrl: "https://copy.ai"
+  },
+  {
+    name: "Writesonic",
+    category: "AI 寫作",
+    logo: "https://writesonic.com/favicon.ico",
+    priceHKD: "HKD 195/月",
+    freePlan: true,
+    hasCommission: true,
+    commission: "30%",
+    cookieDays: 60,
+    rating: 4.2,
+    affiliateUrl: "https://writesonic.com?ref=aicatalysthk",
+    officialUrl: "https://writesonic.com"
+  },
+  {
+    name: "Surfer SEO",
+    category: "SEO 優化",
+    logo: "https://surferseo.com/favicon.ico",
+    priceHKD: "HKD 690/月",
+    freePlan: false,
+    hasCommission: true,
+    commission: "25%",
+    cookieDays: 90,
+    rating: 4.6,
+    affiliateUrl: "https://surferseo.com?ref=aicatalysthk",
+    officialUrl: "https://surferseo.com"
+  },
+  
+  // === 無佣金自然推薦工具 ===
+  {
+    name: "ChatGPT",
+    category: "AI 聊天機器人",
+    logo: "https://chat.openai.com/favicon.ico",
+    priceHKD: "HKD 156/月",
+    freePlan: true,
+    hasCommission: false,
+    commission: null,
+    cookieDays: null,
+    rating: 4.8,
+    affiliateUrl: null,
+    officialUrl: "https://chat.openai.com"
+  },
+  {
+    name: "Notion AI",
+    category: "生產力工具",
+    logo: "https://www.notion.so/favicon.ico",
+    priceHKD: "HKD 78/月",
+    freePlan: true,
+    hasCommission: false,
+    commission: null,
+    cookieDays: null,
+    rating: 4.7,
+    affiliateUrl: null,
+    officialUrl: "https://notion.so"
+  },
+  {
+    name: "Canva AI",
+    category: "設計工具",
+    logo: "https://www.canva.com/favicon.ico",
+    priceHKD: "HKD 99/月",
+    freePlan: true,
+    hasCommission: false,
+    commission: null,
+    cookieDays: null,
+    rating: 4.6,
+    affiliateUrl: null,
+    officialUrl: "https://canva.com"
+  },
+  {
+    name: "Midjourney",
+    category: "AI 圖像生成",
+    logo: "https://www.midjourney.com/favicon.ico",
+    priceHKD: "HKD 78/月",
+    freePlan: false,
+    hasCommission: false,
+    commission: null,
+    cookieDays: null,
+    rating: 4.8,
+    affiliateUrl: null,
+    officialUrl: "https://midjourney.com"
+  },
+  {
+    name: "Perplexity AI",
+    category: "AI 搜尋",
+    logo: "https://www.perplexity.ai/favicon.ico",
+    priceHKD: "HKD 156/月",
+    freePlan: true,
+    hasCommission: false,
+    commission: null,
+    cookieDays: null,
+    rating: 4.5,
+    affiliateUrl: null,
+    officialUrl: "https://perplexity.ai"
+  }
+];
+
+// 生成星級評分
+function generateStars(rating) {
+  const fullStars = Math.floor(rating);
+  const hasHalf = rating % 1 >= 0.5;
+  let stars = '★'.repeat(fullStars);
+  if (hasHalf) stars += '☆';
+  return stars;
+}
+
+// 渲染工具列表
+function renderTools(filter = 'all') {
+  const tbody = document.getElementById('toolsTableBody');
+  const emptyState = document.getElementById('emptyState');
+  
+  let filteredTools = aiTools;
+  
+  if (filter === 'commission') {
+    filteredTools = aiTools.filter(t => t.hasCommission);
+  } else if (filter === 'no-commission') {
+    filteredTools = aiTools.filter(t => !t.hasCommission);
+  }
+  
+  if (filteredTools.length === 0) {
+    tbody.innerHTML = '';
+    emptyState.classList.remove('ach-hidden');
+    return;
+  }
+  
+  emptyState.classList.add('ach-hidden');
+  
+  tbody.innerHTML = filteredTools.map(tool => `
+    <tr data-commission="${tool.hasCommission}">
+      <td>
+        <div class="ach-tool-name">
+          <img src="${tool.logo}" alt="${tool.name}" class="ach-tool-logo" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 40 40%22><rect fill=%22%23F3F4F6%22 width=%2240%22 height=%2240%22/><text x=%2220%22 y=%2226%22 text-anchor=%22middle%22 font-size=%2220%22>🤖</text></svg>'">
+          <div class="ach-tool-info">
+            <span class="ach-tool-info__name">${tool.name}</span>
+            <span class="ach-tool-info__category">${tool.category}</span>
+          </div>
+        </div>
+      </td>
+      <td>${tool.priceHKD}</td>
+      <td>
+        ${tool.freePlan 
+          ? '<span class="ach-badge ach-badge--free">✓ 有免費版</span>' 
+          : '<span style="color: #9CA3AF;">—</span>'}
+      </td>
+      <td>
+        ${tool.hasCommission 
+          ? `<span class="ach-commission">${tool.commission} (${tool.cookieDays}天)</span>` 
+          : '<span class="ach-commission--none">無聯盟計劃</span>'}
+      </td>
+      <td>
+        <div class="ach-rating">
+          <span class="ach-rating__stars">${generateStars(tool.rating)}</span>
+          <span class="ach-rating__score">${tool.rating}</span>
+        </div>
+      </td>
+      <td>
+        ${tool.hasCommission && tool.affiliateUrl
+          ? `<a href="${tool.affiliateUrl}" class="ach-cta-btn" target="_blank" rel="nofollow sponsored">
+              免費試用 →
+            </a>`
+          : `<a href="${tool.officialUrl}" class="ach-cta-btn ach-cta-btn--secondary" target="_blank" rel="noopener">
+              了解更多
+            </a>`}
+      </td>
+    </tr>
+  `).join('');
+}
+
+// 篩選功能
+function filterTools(filter) {
+  // 更新按鈕狀態
+  document.querySelectorAll('.ach-filter-btn').forEach(btn => {
+    btn.classList.remove('active');
+    if (btn.dataset.filter === filter) {
+      btn.classList.add('active');
+    }
+  });
+  
+  // 重新渲染
+  renderTools(filter);
+}
+
+// 更新計數
+function updateCounts() {
+  document.getElementById('countAll').textContent = aiTools.length;
+  document.getElementById('countCommission').textContent = aiTools.filter(t => t.hasCommission).length;
+  document.getElementById('countNoCommission').textContent = aiTools.filter(t => !t.hasCommission).length;
+}
+
+// 初始化
+document.addEventListener('DOMContentLoaded', function() {
+  updateCounts();
+  renderTools('all');
+});
+
+// 如果 DOMContentLoaded 已觸發
+if (document.readyState !== 'loading') {
+  updateCounts();
+  renderTools('all');
+}
+</script>
+
+<!-- 
+  使用說明：
+  
+  1. 更新工具數據：
+     - 修改 aiTools 陣列中的工具資訊
+     - hasCommission: true = 有佣金聯盟
+     - affiliateUrl: 你的聯盟連結（有佣金工具必填）
+  
+  2. 10Web 使用方法：
+     - 在頁面編輯器中加入 Custom HTML Block
+     - 貼上此完整代碼
+     - 預覽並發布
+  
+  3. SEO 優化：
+     - 所有聯盟連結已加 rel="nofollow sponsored"
+     - 工具 logo 有 alt 文字
+-->

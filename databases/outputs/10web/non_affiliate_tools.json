@@ -1,0 +1,162 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2026-03-28",
+  "source": "04__AI_Tools_HK_SMEs_Comparison.md",
+  "totalTools": 14,
+  "tools": [
+    {
+      "name": "Buffer",
+      "category": "Marketing & Content",
+      "subCategory": "Social Media",
+      "function": "Social media scheduling",
+      "pricingHKD": "Free (3 channels); Essentials HKD 47/mo/channel",
+      "keyFeatures": "Post scheduling, analytics, AI assistant, multi-platform publishing",
+      "hkIndustryFit": "F&B, Retail",
+      "recommendReason": "Save 5-10 hrs/week on social media management",
+      "officialUrl": "https://buffer.com"
+    },
+    {
+      "name": "Sprout Social",
+      "category": "Marketing & Content",
+      "subCategory": "Social Media",
+      "function": "Enterprise social management",
+      "pricingHKD": "Standard HKD 1,943/user/mo",
+      "keyFeatures": "Publishing, analytics, social listening, CRM integration, approvals",
+      "hkIndustryFit": "Large SMEs, Agencies",
+      "recommendReason": "Agency-level social management (too expensive for most HK SMEs)",
+      "officialUrl": "https://sproutsocial.com"
+    },
+    {
+      "name": "Ahrefs",
+      "category": "Marketing & Content",
+      "subCategory": "SEO",
+      "function": "SEO toolkit with best backlink database",
+      "pricingHKD": "Lite HKD 1,006/mo; Standard HKD 1,943/mo",
+      "keyFeatures": "Industry-leading backlink analysis, keyword research, site audit, rank tracking",
+      "hkIndustryFit": "E-commerce, Professional Services",
+      "recommendReason": "Essential for serious SEO; best backlink data. Shut down affiliate program.",
+      "officialUrl": "https://ahrefs.com"
+    },
+    {
+      "name": "Klaviyo",
+      "category": "Marketing & Content",
+      "subCategory": "Email Marketing",
+      "function": "E-commerce email and SMS",
+      "pricingHKD": "Free (250 contacts); Email from HKD 156/mo",
+      "keyFeatures": "Advanced segmentation, predictive analytics, deep Shopify/WooCommerce integration",
+      "hkIndustryFit": "E-commerce",
+      "recommendReason": "Up to 25x ROI on email marketing for e-commerce. Gold standard.",
+      "officialUrl": "https://klaviyo.com"
+    },
+    {
+      "name": "Midjourney",
+      "category": "Marketing & Content",
+      "subCategory": "AI Image Generation",
+      "function": "Highest quality AI image generation",
+      "pricingHKD": "Basic HKD 78/mo; Standard HKD 234/mo",
+      "keyFeatures": "Highest-quality AI images, Discord + web interface, V7 model",
+      "hkIndustryFit": "Design, E-commerce, Real Estate",
+      "recommendReason": "Replace $500-2,000/mo stock photo subscriptions",
+      "officialUrl": "https://midjourney.com"
+    },
+    {
+      "name": "DALL-E / OpenAI",
+      "category": "Marketing & Content",
+      "subCategory": "AI Image Generation",
+      "function": "AI image generation via ChatGPT",
+      "pricingHKD": "Via ChatGPT Plus HKD 156/mo; Pro HKD 1,560/mo",
+      "keyFeatures": "Text-to-image integrated into ChatGPT, image editing capabilities",
+      "hkIndustryFit": "All industries",
+      "recommendReason": "Eliminate need for basic graphic design freelancers",
+      "officialUrl": "https://openai.com"
+    },
+    {
+      "name": "Runway ML",
+      "category": "Marketing & Content",
+      "subCategory": "AI Video Generation",
+      "function": "Cutting-edge AI video generation",
+      "pricingHKD": "Free (125 credits); Standard HKD 117/mo; Pro HKD 273/mo",
+      "keyFeatures": "Gen-4 video generation, text/image-to-video, motion tracking",
+      "hkIndustryFit": "Marketing agencies, Real Estate",
+      "recommendReason": "Reduce video production costs by 70-80%",
+      "officialUrl": "https://runwayml.com"
+    },
+    {
+      "name": "Trello",
+      "category": "Operations & Productivity",
+      "subCategory": "Project Management",
+      "function": "Kanban project management",
+      "pricingHKD": "Free; Standard HKD 47/user/mo; Premium HKD 98/user/mo",
+      "keyFeatures": "Boards/lists/cards, Butler automation, Atlassian Intelligence, Power-Ups",
+      "hkIndustryFit": "Small teams",
+      "recommendReason": "Free tier sufficient for teams under 10",
+      "officialUrl": "https://trello.com"
+    },
+    {
+      "name": "Zapier",
+      "category": "Operations & Productivity",
+      "subCategory": "Automation",
+      "function": "Workflow automation platform",
+      "pricingHKD": "Free (100 tasks); Starter HKD 156/mo",
+      "keyFeatures": "7,000+ app integrations, AI actions, Tables, multi-step workflows",
+      "hkIndustryFit": "All industries",
+      "recommendReason": "Automate 10-20 hours/week of repetitive tasks",
+      "officialUrl": "https://zapier.com"
+    },
+    {
+      "name": "Bardeen AI",
+      "category": "Operations & Productivity",
+      "subCategory": "Browser Automation",
+      "function": "Chrome-based workflow automation",
+      "pricingHKD": "Free; Pro HKD 78/500 credits",
+      "keyFeatures": "Chrome extension, data scraping, AI-powered natural language workflows",
+      "hkIndustryFit": "E-commerce",
+      "recommendReason": "Eliminate manual data entry and web research",
+      "officialUrl": "https://bardeen.ai"
+    },
+    {
+      "name": "Intercom",
+      "category": "Operations & Productivity",
+      "subCategory": "Customer Service",
+      "function": "AI-first customer service platform",
+      "pricingHKD": "Essential HKD 226/seat/mo; Advanced HKD 663/seat/mo",
+      "keyFeatures": "Fin AI Agent ($0.99/resolution), live chat, help center, proactive messaging",
+      "hkIndustryFit": "E-commerce, SaaS",
+      "recommendReason": "Fin AI resolves at $0.99 vs $5-15 per human interaction",
+      "officialUrl": "https://intercom.com"
+    },
+    {
+      "name": "Zendesk AI",
+      "category": "Operations & Productivity",
+      "subCategory": "Customer Support",
+      "function": "Enterprise customer support platform",
+      "pricingHKD": "Suite Team HKD 429/agent/mo; Growth HKD 694/agent/mo",
+      "keyFeatures": "AI agents, agent copilot, omnichannel support, 1,000+ integrations",
+      "hkIndustryFit": "Professional Services, Logistics",
+      "recommendReason": "Enterprise customer support automation",
+      "officialUrl": "https://zendesk.com"
+    },
+    {
+      "name": "Fathom",
+      "category": "Operations & Productivity",
+      "subCategory": "Meeting AI",
+      "function": "Free AI meeting assistant",
+      "pricingHKD": "Free (unlimited individual); Teams HKD 226-390/mo",
+      "keyFeatures": "Unlimited free recording/transcription, AI summaries, action items, CRM integration",
+      "hkIndustryFit": "All industries",
+      "recommendReason": "Save 30-60 min per meeting on note-taking. Best free meeting AI.",
+      "officialUrl": "https://fathom.video"
+    },
+    {
+      "name": "Wave Accounting",
+      "category": "Finance & Accounting",
+      "subCategory": "Accounting",
+      "function": "Free accounting software",
+      "pricingHKD": "Free core; Payroll from HKD 156/mo",
+      "keyFeatures": "Free invoicing, bank connections, reporting, receipt OCR, payroll add-on",
+      "hkIndustryFit": "Micro-businesses, Freelancers",
+      "recommendReason": "Save $200-500/yr vs paid accounting software. Zero-cost for micro-businesses.",
+      "officialUrl": "https://waveapps.com"
+    }
+  ]
+}
