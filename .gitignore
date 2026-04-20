@@ -5,3 +5,8 @@
 # Logs (auto-generated, no need to track)
 *.log
 .claude/worktrees/
+
+# Auto-generated sync logs (tracked by claude code worktrees)
+combined-sync.log
+auto-sync.log
+*sync.log
