@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Catalyst HK — Homepage Preview</title>
+  <link rel="stylesheet" href="brand-css-v3.1.css">
+  <style>
+    /* Preview-only layout helpers (not needed in WP) */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .grid-2 { display: grid; grid-template-columns: 60% 40%; gap: 40px; align-items: center; }
+    .grid-2-equal { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .grid-2-sidebar { display: grid; grid-template-columns: 30% 70%; gap: 40px; align-items: start; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    .flex-center { display: flex; justify-content: center; align-items: center; }
+    .flex-row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+    .mb-8 { margin-bottom: 8px; } .mb-12 { margin-bottom: 12px; } .mb-16 { margin-bottom: 16px; }
+    .mb-24 { margin-bottom: 24px; } .mb-32 { margin-bottom: 32px; } .mb-40 { margin-bottom: 40px; }
+    .img-placeholder { background: linear-gradient(135deg, #E5E7EB 0%, #D1D5DB 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #9CA3AF; font-size: 14px; }
+    .page-label { position: fixed; top: 10px; right: 10px; background: #0D47A1; color: #fff; padding: 8px 16px; border-radius: 6px; font-size: 12px; font-weight: 700; z-index: 9999; font-family: Inter, sans-serif; }
+    @media (max-width: 768px) {
+      .grid-2, .grid-2-equal, .grid-2-sidebar, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="page-label">PREVIEW — Homepage</div>
+
+<!-- ===== NAVIGATION ===== -->
+<nav style="background:#fff; padding: 16px 0; box-shadow: 0 1px 3px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000;">
+  <div class="container" style="display:flex; justify-content:space-between; align-items:center;">
+    <div style="font-size:20px; font-weight:700; color:#0D47A1;">AI Catalyst HK</div>
+    <div class="flex-row" style="gap:24px;">
+      <a href="#" style="font-size:14px; font-weight:500;">AI工具比較</a>
+      <a href="#" style="font-size:14px; font-weight:500;">最新資訊</a>
+      <a href="#" style="font-size:14px; font-weight:500;">電子報</a>
+      <a href="#" style="font-size:14px; font-weight:500;">提示詞商店</a>
+      <a href="#" style="font-size:14px; font-weight:500;">關於我們</a>
+      <a href="#" class="nav-cta-button">免費訂閱電子報</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== 2.1 TRUST BAR ===== -->
+<div class="trust-bar">
+  獨立評測，不受廣告商影響 · 75+ 工具深度評測 · 每週更新 · 聯盟披露
+</div>
+
+<!-- ===== 2.2 HERO ===== -->
+<section class="section-white">
+  <div class="container">
+    <div class="grid-2">
+      <div>
+        <div class="hero-eyebrow mb-8">香港No.1 AI工具評測平台</div>
+        <h1 class="hero-heading mb-8">人工貴、競爭大、乜都自己做？</h1>
+        <h1 class="hero-heading mb-16">AI工具幫你慳時間慳成本</h1>
+        <p class="hero-subtitle mb-24">獨立評測75+款AI工具 · 真實HKD定價 · 30分鐘上手攻略 · 每週更新</p>
+
+        <div class="hero-stats mb-24">
+          <div>
+            <div class="hero-stat-number">3,200+</div>
+            <div class="hero-stat-label">訂閱中小企主</div>
+          </div>
+          <div>
+            <div class="hero-stat-number">75+</div>
+            <div class="hero-stat-label">工具深度評測</div>
+          </div>
+          <div>
+            <div class="hero-stat-number">HKD 2.4M+</div>
+            <div class="hero-stat-label">為用家節省成本</div>
+          </div>
+        </div>
+
+        <a href="#" class="btn-accent mb-12" style="display:inline-block;">免費訂閱《AI實戰情報》</a>
+        <br>
+        <a href="#" style="color:#0D47A1; font-size:14px; font-weight:500;">查看精選工具評測 →</a>
+      </div>
+      <div>
+        <div class="img-placeholder" style="width:100%; height:360px;">Dashboard Illustration</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 2.3 BRAND PARTNERS ===== -->
+<section class="brand-partners">
+  <div class="container">
+    <div class="brand-partners-heading mb-16">精選合作AI工具品牌</div>
+    <div class="brand-partners-list">
+      Jasper AI · HubSpot · Surfer SEO · Copy.ai · Synthesia · Tidio · Semrush · Notion · n8n · Canva · Claude · Beehiiv
+    </div>
+  </div>
+</section>
+
+<!-- ===== 2.4 HOW IT WORKS ===== -->
+<section class="section-white">
+  <div class="container">
+    <h2 class="section-heading mb-8">老闆乜都自己做？我哋幫你 3 步搞掂</h2>
+    <p class="section-subtitle mb-40">香港中小企視角 · 100%獨立測試 · 真實使用場景</p>
+
+    <div class="grid-3">
+      <div class="step-card">
+        <div class="step-card-icon">&#128269;</div>
+        <h3>獨立實測 14 天</h3>
+        <p>我哋親自試用每款工具超過14天，用真實香港中小企業務場景測試。</p>
+      </div>
+      <div class="step-card">
+        <div class="step-card-icon">&#128202;</div>
+        <h3>5 維度客觀評分</h3>
+        <p>按功能、易用性、繁中支援、性價比、客服 5 個維度評分。</p>
+      </div>
+      <div class="step-card">
+        <div class="step-card-icon">&#127919;</div>
+        <h3>行業精準配對</h3>
+        <p>根據你嘅行業、員工人數、月度預算，配對最適合嘅AI工具。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 2.5 FEATURED TOOLS ===== -->
+<section class="section-light">
+  <div class="container">
+    <h2 class="section-heading mb-40">本週精選AI工具</h2>
+
+    <div class="grid-3">
+      <!-- Card 1 -->
+      <div class="tool-card">
+        <div class="tool-card-name">Jasper AI</div>
+        <span class="category-tag">AI寫作</span>
+        <div class="tool-rating" style="margin:8px 0;">&#9733;&#9733;&#9733;&#9733;&#9734; 4.6/5</div>
+        <div class="tool-card-description">最強AI寫作工具，繁中輸出流暢</div>
+        <div class="tool-card-price">HKD 390/月</div>
+        <div class="flex-row" style="gap:8px;">
+          <a href="#" class="btn-outline" style="font-size:13px; padding:8px 14px;">查看完整評測</a>
+          <a href="#" class="btn-accent" style="font-size:13px; padding:8px 14px;">立即試用 →</a>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="tool-card">
+        <div class="tool-card-name">HubSpot</div>
+        <span class="category-tag">AI CRM</span>
+        <div class="tool-rating" style="margin:8px 0;">&#9733;&#9733;&#9733;&#9733;&#9734; 4.5/5</div>
+        <div class="tool-card-description">中小企最佳免費CRM起步</div>
+        <div class="tool-card-price">免費起步</div>
+        <div class="flex-row" style="gap:8px;">
+          <a href="#" class="btn-outline" style="font-size:13px; padding:8px 14px;">查看完整評測</a>
+          <a href="#" class="btn-accent" style="font-size:13px; padding:8px 14px;">立即試用 →</a>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="tool-card">
+        <div class="tool-card-name">Surfer SEO</div>
+        <span class="category-tag">SEO</span>
+        <div class="tool-rating" style="margin:8px 0;">&#9733;&#9733;&#9733;&#9733;&#9734; 4.3/5</div>
+        <div class="tool-card-description">SEO內容優化，自動關鍵字建議</div>
+        <div class="tool-card-price">HKD 860/月</div>
+        <div class="flex-row" style="gap:8px;">
+          <a href="#" class="btn-outline" style="font-size:13px; padding:8px 14px;">查看完整評測</a>
+          <a href="#" class="btn-accent" style="font-size:13px; padding:8px 14px;">立即試用 →</a>
+        </div>
+      </div>
+      <!-- Card 4 -->
+      <div class="tool-card">
+        <div class="tool-card-name">Copy.ai</div>
+        <span class="category-tag">AI寫作</span>
+        <div class="tool-rating" style="margin:8px 0;">&#9733;&#9733;&#9733;&#9733;&#9734; 4.2/5</div>
+        <div class="tool-card-description">高佣金AI寫作，適合行銷團隊</div>
+        <div class="tool-card-price">HKD 390/月</div>
+        <div class="flex-row" style="gap:8px;">
+          <a href="#" class="btn-outline" style="font-size:13px; padding:8px 14px;">查看完整評測</a>
+          <a href="#" class="btn-accent" style="font-size:13px; padding:8px 14px;">立即試用 →</a>
+        </div>
+      </div>
+      <!-- Card 5 -->
+      <div class="tool-card">
+        <div class="tool-card-name">Synthesia</div>
+        <span class="category-tag">AI影片</span>
+        <div class="tool-rating" style="margin:8px 0;">&#9733;&#9733;&#9733;&#9733;&#9734; 4.5/5</div>
+        <div class="tool-card-description">AI人像視頻，無需拍攝</div>
+        <div class="tool-card-price">HKD 1,100/月</div>
+        <div class="flex-row" style="gap:8px;">
+          <a href="#" class="btn-outline" style="font-size:13px; padding:8px 14px;">查看完整評測</a>
+          <a href="#" class="btn-accent" style="font-size:13px; padding:8px 14px;">立即試用 →</a>
+        </div>
+      </div>
+      <!-- Card 6 -->
+      <div class="tool-card">
+        <div class="tool-card-name">Tidio</div>
+        <span class="category-tag">AI客服</span>
+        <div class="tool-rating" style="margin:8px 0;">&#9733;&#9733;&#9733;&#9733;&#9734; 4.1/5</div>
+        <div class="tool-card-description">AI聊天客服，WhatsApp整合</div>
+        <div class="tool-card-price">免費起步</div>
+        <div class="flex-row" style="gap:8px;">
+          <a href="#" class="btn-outline" style="font-size:13px; padding:8px 14px;">查看完整評測</a>
+          <a href="#" class="btn-accent" style="font-size:13px; padding:8px 14px;">立即試用 →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 2.6 INDUSTRY TABS ===== -->
+<section class="section-white">
+  <div class="container">
+    <h2 class="section-heading mb-8">按行業探索AI工具組合</h2>
+    <p class="section-subtitle mb-32">點擊你的行業，查看推薦AI工具 + 政府資助參考</p>
+
+    <div class="industry-tabs mb-24">
+      <div class="industry-tab active">金融科技</div>
+      <div class="industry-tab">餐飲</div>
+      <div class="industry-tab">零售</div>
+      <div class="industry-tab">進出口貿易</div>
+      <div class="industry-tab">專業服務</div>
+      <div class="industry-tab">教育</div>
+      <div class="industry-tab">地產</div>
+      <div class="industry-tab">物流</div>
+      <div class="industry-tab">美容健身</div>
+      <div class="industry-tab">初創公司</div>
+    </div>
+
+    <div class="industry-content-card">
+      <p style="font-weight:700; margin-bottom:8px;">你的痛點：人手不足、WhatsApp接單混亂、食材成本管理難</p>
+      <p style="margin-bottom:8px;">推薦工具：Tidio (AI客服)、n8n (自動化)、Canva (餐牌設計)、HubSpot (CRM)</p>
+      <p style="color:#10B981; font-weight:700; margin-bottom:8px;">每月可節省：HK$8,000 - 25,000</p>
+      <p style="margin-bottom:16px;">適用資助：BUD基金 + DTSPP</p>
+      <a href="#" class="btn-accent" style="font-size:14px; padding:10px 20px;">查看完整行業方案 →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 2.7 NEWSLETTER CTA (DARK) ===== -->
+<section class="section-dark">
+  <div class="container text-center">
+    <p style="color:#6B7280; font-size:13px; margin-bottom:8px;">每週一封，免費訂閱</p>
+    <h2 style="color:#fff !important; font-size:30px; font-weight:700; margin-bottom:12px;">《AI實戰情報》電子報</h2>
+    <p style="color:#9CA3AF; font-size:15px; margin-bottom:24px;">每期包含：本週AI大事 · 深度分析 · 工具評測 · 即用提示詞</p>
+
+    <div class="email-signup-row">
+      <input type="email" class="email-input" placeholder="輸入你的電郵">
+      <button class="btn-accent" style="border:none; cursor:pointer;">立即免費訂閱</button>
+    </div>
+
+    <p style="color:#6B7280; font-size:12px; margin-top:12px;">
+      已有 3,200+ 香港中小企主訂閱 | 每週一發送 | 隨時退訂
+    </p>
+  </div>
+</section>
+
+<!-- ===== 2.8 LATEST ARTICLES ===== -->
+<section class="section-white">
+  <div class="container">
+    <h2 class="section-heading mb-40">最新AI工具評測 + 攻略</h2>
+
+    <div class="grid-3">
+      <div class="article-card">
+        <div class="img-placeholder article-card-image">Image</div>
+        <div class="article-card-body">
+          <span class="article-card-tag">工具評測</span>
+          <div class="article-card-title">ChatGPT 實測評價 2026：香港中小企值唔值得用？</div>
+          <div class="article-card-date">2026-03-20</div>
+          <div class="article-card-excerpt">深度測試 ChatGPT 在香港中小企場景下的實用性，包括繁體中文輸出質素、定價分析...</div>
+          <a href="#" class="article-card-link">閱讀完整評測 →</a>
+        </div>
+      </div>
+      <div class="article-card">
+        <div class="img-placeholder article-card-image">Image</div>
+        <div class="article-card-body">
+          <span class="article-card-tag">工具比較</span>
+          <div class="article-card-title">Jasper AI vs Copy.ai：香港中小企哪個更值得？</div>
+          <div class="article-card-date">2026-03-18</div>
+          <div class="article-card-excerpt">兩款 AI 寫作工具正面對決，比較功能、繁中支援、HKD 定價及適用場景...</div>
+          <a href="#" class="article-card-link">閱讀完整評測 →</a>
+        </div>
+      </div>
+      <div class="article-card">
+        <div class="img-placeholder article-card-image">Image</div>
+        <div class="article-card-body">
+          <span class="article-card-tag">精選清單</span>
+          <div class="article-card-title">2026 最佳 AI CRM 工具 Top 5：HubSpot 居首</div>
+          <div class="article-card-date">2026-03-15</div>
+          <div class="article-card-excerpt">精選 5 款最適合香港中小企的 AI CRM 工具，從免費到付費方案全面比較...</div>
+          <a href="#" class="article-card-link">閱讀完整評測 →</a>
+        </div>
+      </div>
+      <div class="article-card">
+        <div class="img-placeholder article-card-image">Image</div>
+        <div class="article-card-body">
+          <span class="article-card-tag">使用教學</span>
+          <div class="article-card-title">n8n 自動化教學：3步設定WhatsApp自動回覆</div>
+          <div class="article-card-date">2026-03-12</div>
+          <div class="article-card-excerpt">手把手教你用 n8n 建立 WhatsApp 自動回覆工作流，零代碼即可上手...</div>
+          <a href="#" class="article-card-link">閱讀完整評測 →</a>
+        </div>
+      </div>
+      <div class="article-card">
+        <div class="img-placeholder article-card-image">Image</div>
+        <div class="article-card-body">
+          <span class="article-card-tag">工具評測</span>
+          <div class="article-card-title">Surfer SEO 評測：SEO新手30分鐘上手攻略</div>
+          <div class="article-card-date">2026-03-10</div>
+          <div class="article-card-excerpt">實測 Surfer SEO 嘅內容優化功能，睇吓佢點樣幫你提升 Google 排名...</div>
+          <a href="#" class="article-card-link">閱讀完整評測 →</a>
+        </div>
+      </div>
+      <div class="article-card">
+        <div class="img-placeholder article-card-image">Image</div>
+        <div class="article-card-body">
+          <span class="article-card-tag">行業分析</span>
+          <div class="article-card-title">AI工具慳錢攻略：每月慳 HK$15,000 的方法</div>
+          <div class="article-card-date">2026-03-08</div>
+          <div class="article-card-excerpt">分析 10 個行業如何透過 AI 工具組合每月節省 HK$8,000 至 HK$60,000...</div>
+          <a href="#" class="article-card-link">閱讀完整評測 →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center" style="margin-top:32px;">
+      <a href="#" class="btn-outline-amber" style="padding:12px 28px;">查看所有評測文章 →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 2.9 SOCIAL PROOF / FOUNDER ===== -->
+<section class="founder-section">
+  <div class="container">
+    <div class="grid-2-sidebar">
+      <div class="text-center">
+        <div class="founder-photo img-placeholder" style="width:200px; height:200px; border-radius:50%; margin:0 auto 16px;">Photo</div>
+        <div class="founder-name">Tik SO</div>
+        <div class="founder-title">蘇駿迪 · 創辦人及主編</div>
+      </div>
+      <div>
+        <h2 style="font-size:24px; margin-bottom:20px;">為什麼 3,200+ 香港中小企主信任我哋？</h2>
+
+        <div class="trust-check-item">
+          <span class="trust-check-icon">&#10003;</span>
+          <span><strong>100% 獨立評測</strong> — 不接受任何工具品牌贊助影響評分</span>
+        </div>
+        <div class="trust-check-item">
+          <span class="trust-check-icon">&#10003;</span>
+          <span><strong>真實香港視角</strong> — HKD定價、繁體中文、本地使用場景測試</span>
+        </div>
+        <div class="trust-check-item">
+          <span class="trust-check-icon">&#10003;</span>
+          <span><strong>每週持續更新</strong> — 75+ 工具數據每週更新</span>
+        </div>
+        <div class="trust-check-item">
+          <span class="trust-check-icon">&#10003;</span>
+          <span><strong>AI自動化驅動</strong> — 用我哋推薦嘅工具建立成個內容系統</span>
+        </div>
+
+        <div class="founder-stats">
+          <div class="founder-stat">75+ 工具評測</div>
+          <div class="founder-stat">156 篇文章</div>
+          <div class="founder-stat">3,200+ 訂閱者</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="container">
+    <div class="grid-3" style="padding:20px 0;">
+      <div>
+        <h3>AI Catalyst HK</h3>
+        <p style="color:#9CA3AF; font-size:14px; margin-bottom:16px;">香港中小企 AI 工具實戰情報</p>
+        <div class="flex-row" style="gap:12px;">
+          <a href="#" style="color:#9CA3AF; font-size:18px;">&#x1F517; LinkedIn</a>
+          <a href="#" style="color:#9CA3AF; font-size:18px;">&#x1F517; Facebook</a>
+          <a href="#" style="color:#9CA3AF; font-size:18px;">&#x1F517; Instagram</a>
+        </div>
+      </div>
+      <div>
+        <h3>快速連結</h3>
+        <a href="#">首頁</a>
+        <a href="#">AI工具比較</a>
+        <a href="#">最新資訊</a>
+        <a href="#">電子報</a>
+        <a href="#">提示詞商店</a>
+        <a href="#">關於我們</a>
+      </div>
+      <div>
+        <h3>法律資訊</h3>
+        <a href="#">編輯政策</a>
+        <a href="#">聯盟披露</a>
+        <a href="#">私隱政策</a>
+      </div>
+    </div>
+    <div style="border-top:1px solid #374151; padding-top:16px; margin-top:16px; text-align:center;">
+      <p style="color:#6B7280; font-size:12px;">&copy; 2026 AI Catalyst HK. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

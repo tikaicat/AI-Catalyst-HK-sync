@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Catalyst HK — 關於我們</title>
+  <style>
+/* ===== AI CATALYST HK — COMPLETE BRAND CSS V3.1 ===== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary: #0D47A1;
+  --primary-dark: #0A3680;
+  --accent: #F59E0B;
+  --accent-hover: #D97706;
+  --bg-white: #FFFFFF;
+  --bg-light: #F9FAFB;
+  --bg-light-alt: #F3F4F6;
+  --bg-dark: #111827;
+  --text-body: #1F2937;
+  --text-secondary: #6B7280;
+  --text-muted: #9CA3AF;
+  --success: #10B981;
+  --success-bg: #ECFDF5;
+  --success-text: #065F46;
+  --warning-bg: #FEF3C7;
+  --warning-text: #92400E;
+  --border: #E5E7EB;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --radius-sm: 4px;
+  --radius: 8px;
+  --radius-lg: 12px;
+  --radius-pill: 20px;
+  --transition: all 0.2s ease;
+}
+
+body {
+  font-family: 'Noto Sans TC', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--text-body);
+  font-size: 16px;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 { font-family: 'Inter', 'Noto Sans TC', sans-serif; line-height: 1.3; }
+h1 { color: var(--primary); font-size: 36px; font-weight: 700; }
+h2 { color: var(--primary); font-size: 24px; font-weight: 600; }
+h3 { color: var(--text-body); font-size: 18px; font-weight: 500; }
+p { color: var(--text-body); margin-bottom: 1em; }
+a { color: var(--primary); text-decoration: none; transition: var(--transition); }
+a:hover { color: var(--accent); }
+
+.nav-cta-button, .elementor-button.nav-subscribe { background-color: var(--accent) !important; color: var(--bg-dark) !important; font-weight: 700; border-radius: var(--radius); padding: 8px 20px; font-size: 14px; border: none; transition: var(--transition); }
+.nav-cta-button:hover { background-color: var(--accent-hover) !important; }
+
+.elementor-button, a.cta-button, .newsletter-cta, button.btn-primary, .btn-accent { background-color: var(--accent) !important; color: var(--bg-dark) !important; border-radius: 6px; font-weight: 700; border: none; padding: 12px 24px; font-size: 15px; cursor: pointer; transition: var(--transition); display: inline-block; text-align: center; }
+.elementor-button:hover, a.cta-button:hover, button.btn-primary:hover, .btn-accent:hover { background-color: var(--accent-hover) !important; transform: translateY(-1px); box-shadow: var(--shadow-md); }
+
+.founder-photo { width: 200px; height: 200px; border-radius: 50%; background: #E5E7EB; margin: 0 auto 16px; overflow: hidden; object-fit: cover; }
+.founder-name { color: var(--primary) !important; font-size: 18px; font-weight: 700; text-align: center; }
+.founder-title { color: var(--text-secondary); font-size: 13px; text-align: center; }
+
+.editorial-card { background: var(--bg-white); border-radius: var(--radius); padding: 20px; text-align: center; transition: var(--transition); }
+.editorial-card:hover { box-shadow: var(--shadow-sm); }
+.editorial-card-icon { font-size: 32px; color: var(--primary); margin-bottom: 12px; }
+.editorial-card h3 { color: var(--primary) !important; font-size: 16px; font-weight: 700; margin-bottom: 8px; }
+.editorial-card p { color: var(--text-secondary); font-size: 13px; }
+
+.disclosure-badge, .affiliate-disclosure { background: var(--warning-bg); border: 1px solid var(--accent); border-radius: var(--radius-sm); padding: 8px 12px; font-size: 11px; color: var(--warning-text); line-height: 1.5; }
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 15px;
+  font-family: inherit;
+  transition: var(--transition);
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(13, 71, 161, 0.1);
+  outline: none;
+}
+.contact-form textarea { min-height: 120px; resize: vertical; }
+
+.section-white { background: var(--bg-white); padding: 60px 0; }
+.section-light { background: var(--bg-light); padding: 60px 0; }
+.section-dark  { background: var(--bg-dark); padding: 60px 0; color: #fff; }
+.section-heading { color: var(--primary) !important; font-size: 28px !important; font-weight: 700; text-align: center; margin-bottom: 12px; }
+.section-subtitle { color: var(--text-secondary); font-size: 15px; text-align: center; margin-bottom: 32px; }
+.text-center { text-align: center; }
+
+footer, .site-footer { background-color: var(--bg-dark) !important; border-top: 3px solid var(--accent); color: #fff; padding: 40px 0; }
+footer a, .site-footer a { color: var(--text-muted) !important; font-size: 14px; }
+footer a:hover, .site-footer a:hover { color: var(--accent) !important; }
+footer h3, .site-footer h3 { color: #fff !important; font-size: 16px; margin-bottom: 16px; }
+
+@media (max-width: 1024px) {
+  h1 { font-size: 28px; }
+  h2 { font-size: 22px; }
+}
+@media (max-width: 768px) {
+  h1 { font-size: 24px; }
+  h2 { font-size: 20px; }
+  .section-white, .section-light, .section-dark { padding: 40px 0; }
+}
+@media (max-width: 480px) {
+  body { font-size: 15px; }
+  h1 { font-size: 22px; }
+}
+
+/* ── LAYOUT ADDITIONS ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { margin: 0; padding: 0; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.content-narrow { max-width: 800px; margin: 0 auto; }
+.grid-2 { display: grid; grid-template-columns: 60% 40%; gap: 40px; align-items: center; }
+.grid-2-equal { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.grid-2-about { display: grid; grid-template-columns: 35% 65%; gap: 40px; align-items: start; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.flex-center { display: flex; justify-content: center; align-items: center; gap: 12px; }
+.flex-row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+.mb-8 { margin-bottom: 8px; } .mb-12 { margin-bottom: 12px; } .mb-16 { margin-bottom: 16px; }
+.mb-24 { margin-bottom: 24px; } .mb-32 { margin-bottom: 32px; } .mb-40 { margin-bottom: 40px; }
+.img-placeholder { background: linear-gradient(135deg, #E5E7EB 0%, #D1D5DB 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #9CA3AF; font-size: 14px; }
+
+/* Nav */
+.site-nav { background: #fff; padding: 16px 0; box-shadow: 0 1px 3px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+.nav-container { display: flex; justify-content: space-between; align-items: center; }
+.nav-logo { font-size: 20px; font-weight: 700; color: #0D47A1; text-decoration: none; }
+.nav-links { display: flex; gap: 24px; align-items: center; }
+.nav-link { font-size: 14px; font-weight: 500; color: #1F2937; text-decoration: none; }
+.nav-link:hover, .nav-link.active { color: #0D47A1; }
+.nav-toggle { display: none; background: none; border: none; font-size: 24px; cursor: pointer; color: #1F2937; }
+
+/* Footer extras */
+.footer-desc { color: #9CA3AF; font-size: 14px; margin-bottom: 16px; }
+.footer-grid a { display: block; }
+.footer-bottom { border-top: 1px solid #374151; padding-top: 16px; margin-top: 16px; text-align: center; }
+.footer-bottom p { color: #6B7280; font-size: 12px; }
+
+@media (max-width: 768px) {
+  .nav-toggle { display: block; }
+  .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: #fff; padding: 20px 24px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); gap: 16px; }
+  .nav-links.open { display: flex; }
+  .site-nav { position: relative; }
+  .grid-2, .grid-2-equal, .grid-2-about, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+}
+  </style>
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav class="site-nav">
+  <div class="container nav-container">
+    <a href="page-homepage.html" class="nav-logo">AI Catalyst HK</a>
+    <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+    <div class="nav-links">
+      <a href="page-homepage.html" class="nav-link">首頁</a>
+      <a href="page-ai-tools.html" class="nav-link">AI工具比較</a>
+      <a href="page-newsletter.html" class="nav-link">電子報</a>
+      <a href="page-products.html" class="nav-link">提示詞商店</a>
+      <a href="page-about.html" class="nav-link active">關於我們</a>
+      <a href="page-newsletter.html" class="nav-cta-button">免費訂閱電子報</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== SECTION 1: FOUNDER ===== -->
+<section class="section-white">
+  <div class="container">
+    <div class="grid-2-about">
+      <div class="text-center">
+        <div class="founder-photo img-placeholder" style="width:200px; height:200px; border-radius:50%; margin:0 auto 16px;">Photo</div>
+        <div class="founder-name">Tik SO（蘇駿迪）</div>
+        <div class="founder-title">創辦人及主編</div>
+      </div>
+      <div>
+        <h2 style="margin-bottom:8px;">關於 AI Catalyst HK</h2>
+        <p style="color:#6B7280; margin-bottom:16px;">助香港中小企掌握AI工具的獨立評測平台</p>
+        <p>因為見到太多香港老闆花大量時間做重複工作，明明有AI工具可以幫手，但搵唔到可信嘅繁體中文資訊。所以創立 AI Catalyst HK，用獨立測試同真實HKD定價，幫中小企搵到最適合嘅AI工具。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 2: EDITORIAL STANDARDS ===== -->
+<section class="section-light">
+  <div class="container">
+    <h2 class="section-heading mb-32">我們的編輯標準</h2>
+    <div class="grid-4">
+      <div class="editorial-card">
+        <div class="editorial-card-icon">&#128270;</div>
+        <h3>獨立評測</h3>
+        <p>不接受贊助影響評分</p>
+      </div>
+      <div class="editorial-card">
+        <div class="editorial-card-icon">&#9989;</div>
+        <h3>真實測試</h3>
+        <p>每款工具親自試用14天+</p>
+      </div>
+      <div class="editorial-card">
+        <div class="editorial-card-icon">&#128275;</div>
+        <h3>透明披露</h3>
+        <p>所有聯盟連結清楚標示</p>
+      </div>
+      <div class="editorial-card">
+        <div class="editorial-card-icon">&#128260;</div>
+        <h3>定期更新</h3>
+        <p>數據每週更新</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 3: DISCLOSURE ===== -->
+<section class="section-white">
+  <div class="container" style="max-width:800px;">
+    <h2 style="margin-bottom:16px;">聯盟披露聲明</h2>
+    <p style="margin-bottom:20px;">AI Catalyst HK 透過聯盟行銷佣金獲取收入。當你通過我們的推薦連結購買產品時，我們可能會收到佣金。這不會影響你的購買價格，亦不影響我們的評測結果。所有評測均為獨立進行。</p>
+    <div class="disclosure-badge" style="display:block; padding:16px;">
+      <strong>聯盟連結如何運作：</strong> 本網站部分連結為聯盟連結（以 * 標示）。當你透過這些連結購買產品時，我們會收到一小部分佣金。這些佣金用於支持我們的獨立評測工作。你的購買價格不會因此增加。我們只推薦經過實測且認為值得的產品。
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 4: CONTACT ===== -->
+<section class="section-light">
+  <div class="container" style="max-width:600px;">
+    <h2 class="section-heading mb-32">聯絡我們</h2>
+    <div class="contact-form">
+      <div style="margin-bottom:16px;">
+        <label style="display:block; font-size:14px; font-weight:500; margin-bottom:6px; color:#1F2937;">姓名</label>
+        <input type="text" placeholder="你的姓名">
+      </div>
+      <div style="margin-bottom:16px;">
+        <label style="display:block; font-size:14px; font-weight:500; margin-bottom:6px; color:#1F2937;">電郵</label>
+        <input type="email" placeholder="你的電郵地址">
+      </div>
+      <div style="margin-bottom:20px;">
+        <label style="display:block; font-size:14px; font-weight:500; margin-bottom:6px; color:#1F2937;">訊息</label>
+        <textarea placeholder="你的訊息..."></textarea>
+      </div>
+      <button class="btn-accent" style="width:100%; border:none; cursor:pointer; padding:14px; font-size:16px;">提交</button>
+    </div>
+    <div class="flex-row" style="justify-content:center; margin-top:24px; gap:20px;">
+      <a href="#" style="color:#6B7280; font-size:24px;">&#x1F4E7; LinkedIn</a>
+      <a href="#" style="color:#6B7280; font-size:24px;">&#x1F4F1; Facebook</a>
+      <a href="#" style="color:#6B7280; font-size:24px;">&#x1F4F7; Instagram</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="container">
+    <div class="grid-3 footer-grid">
+      <div>
+        <h3>AI Catalyst HK</h3>
+        <p class="footer-desc">香港中小企 AI 工具實戰情報</p>
+      </div>
+      <div>
+        <h3>快速連結</h3>
+        <a href="page-homepage.html">首頁</a>
+        <a href="page-ai-tools.html">AI工具比較</a>
+        <a href="page-newsletter.html">電子報</a>
+        <a href="page-products.html">提示詞商店</a>
+        <a href="page-about.html">關於我們</a>
+      </div>
+      <div>
+        <h3>法律資訊</h3>
+        <a href="#">編輯政策</a>
+        <a href="#">聯盟披露</a>
+        <a href="#">私隱政策</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 AI Catalyst HK. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.querySelector('.nav-toggle').addEventListener('click', function() {
+  document.querySelector('.nav-links').classList.toggle('open');
+});
+</script>
+
+</body>
+</html>
