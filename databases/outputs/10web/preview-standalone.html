@@ -1,0 +1,1738 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Catalyst HK — Homepage Preview</title>
+  <style>
+/* ===== AI CATALYST HK — COMPLETE BRAND CSS V3.1 ===== */
+/* Covers all 6 pages + blog templates · 2026-03 */
+
+/* ── FONTS ── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;600;700&display=swap');
+
+/* ── DESIGN TOKENS (CSS Variables) ── */
+:root {
+  --primary: #0D47A1;
+  --primary-dark: #0A3680;
+  --accent: #F59E0B;
+  --accent-hover: #D97706;
+  --bg-white: #FFFFFF;
+  --bg-light: #F9FAFB;
+  --bg-light-alt: #F3F4F6;
+  --bg-dark: #111827;
+  --text-body: #1F2937;
+  --text-secondary: #6B7280;
+  --text-muted: #9CA3AF;
+  --success: #10B981;
+  --success-bg: #ECFDF5;
+  --success-text: #065F46;
+  --warning-bg: #FEF3C7;
+  --warning-text: #92400E;
+  --border: #E5E7EB;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --radius-sm: 4px;
+  --radius: 8px;
+  --radius-lg: 12px;
+  --radius-pill: 20px;
+  --transition: all 0.2s ease;
+}
+
+/* ── BASE TYPOGRAPHY ── */
+body {
+  font-family: 'Noto Sans TC', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--text-body);
+  font-size: 16px;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', 'Noto Sans TC', sans-serif;
+  line-height: 1.3;
+}
+
+h1 {
+  color: var(--primary);
+  font-size: 36px;
+  font-weight: 700;
+}
+
+h2 {
+  color: var(--primary);
+  font-size: 24px;
+  font-weight: 600;
+}
+
+h3 {
+  color: var(--text-body);
+  font-size: 18px;
+  font-weight: 500;
+}
+
+p {
+  color: var(--text-body);
+  margin-bottom: 1em;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+/* ── TRUST BAR (Prompt 2.1) ── */
+.trust-bar,
+.elementor-element.trust-bar {
+  background: var(--bg-dark) !important;
+  color: #fff;
+  font-size: 12px;
+  padding: 8px 0;
+  text-align: center;
+  letter-spacing: 0.5px;
+  line-height: 1.5;
+  width: 100%;
+}
+
+/* ── NAVIGATION ── */
+.site-header,
+.elementor-section.navigation {
+  background: var(--bg-white) !important;
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-cta-button,
+.elementor-button.nav-subscribe {
+  background-color: var(--accent) !important;
+  color: var(--bg-dark) !important;
+  font-weight: 700;
+  border-radius: var(--radius);
+  padding: 8px 20px;
+  font-size: 14px;
+  border: none;
+  transition: var(--transition);
+}
+
+.nav-cta-button:hover {
+  background-color: var(--accent-hover) !important;
+}
+
+/* ── BUTTONS — PRIMARY (Amber CTA) ── */
+.elementor-button,
+a.cta-button,
+.newsletter-cta,
+button.btn-primary,
+.btn-accent {
+  background-color: var(--accent) !important;
+  color: var(--bg-dark) !important;
+  border-radius: 6px;
+  font-weight: 700;
+  border: none;
+  padding: 12px 24px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-block;
+  text-align: center;
+}
+
+.elementor-button:hover,
+a.cta-button:hover,
+button.btn-primary:hover,
+.btn-accent:hover {
+  background-color: var(--accent-hover) !important;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+/* ── BUTTONS — OUTLINE ── */
+.btn-outline,
+.elementor-button.btn-outline {
+  background: transparent !important;
+  border: 2px solid var(--primary) !important;
+  color: var(--primary) !important;
+  border-radius: 6px;
+  font-weight: 600;
+  padding: 10px 22px;
+  transition: var(--transition);
+}
+
+.btn-outline:hover,
+.elementor-button.btn-outline:hover {
+  background: var(--accent) !important;
+  border-color: var(--accent) !important;
+  color: var(--bg-dark) !important;
+}
+
+/* ── BUTTONS — OUTLINE AMBER ── */
+.btn-outline-amber {
+  background: transparent !important;
+  border: 2px solid var(--accent) !important;
+  color: var(--accent) !important;
+  border-radius: 6px;
+  font-weight: 600;
+  padding: 10px 22px;
+  transition: var(--transition);
+}
+
+.btn-outline-amber:hover {
+  background: var(--accent) !important;
+  color: var(--bg-dark) !important;
+}
+
+/* ── HERO SECTION (Prompt 2.2) ── */
+.hero-section {
+  padding: 60px 0;
+  background: var(--bg-white);
+}
+
+.hero-eyebrow {
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.hero-heading {
+  color: var(--primary) !important;
+  font-size: 40px !important;
+  font-weight: 700 !important;
+  line-height: 1.25 !important;
+  margin-bottom: 8px;
+}
+
+.hero-subtitle {
+  color: var(--text-secondary);
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+
+/* ── HERO STATS (Prompt 2.2) ── */
+.hero-stats {
+  display: flex;
+  gap: 32px;
+  margin: 24px 0;
+}
+
+.hero-stat-number {
+  color: var(--accent);
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.hero-stat-label {
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+
+/* ── BRAND PARTNERS BAR (Prompt 2.3 — static) ── */
+.brand-partners {
+  background: var(--bg-white);
+  padding: 40px 0;
+  text-align: center;
+}
+
+.brand-partners-heading {
+  color: var(--text-secondary) !important;
+  font-size: 16px !important;
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+
+.brand-partners-list {
+  color: var(--text-muted);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* ── HOW IT WORKS CARDS (Prompt 2.4) ── */
+.how-it-works {
+  padding: 60px 0;
+  background: var(--bg-white);
+}
+
+.step-card {
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 30px;
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  transition: var(--transition);
+}
+
+.step-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.step-card-icon {
+  color: var(--primary);
+  font-size: 40px;
+  margin-bottom: 16px;
+}
+
+.step-card h3 {
+  color: var(--primary) !important;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.step-card p {
+  color: var(--text-body);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ── TOOL CARDS (Prompt 2.5, 3.1) ── */
+.tool-card,
+.elementor-element.tool-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  padding: 24px;
+  transition: var(--transition);
+}
+
+.tool-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.tool-card-name {
+  color: var(--primary);
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.tool-card-description {
+  color: var(--text-body);
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.tool-card-price {
+  color: var(--text-secondary);
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+
+/* ── CATEGORY TAGS ── */
+.category-tag {
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+/* ── RATINGS ── */
+.tool-rating,
+.rating-score {
+  color: var(--success);
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.rating-bar {
+  background: #E5E7EB;
+  border-radius: 4px;
+  height: 8px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.rating-bar-fill {
+  background: var(--success);
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.4s ease;
+}
+
+/* ── INDUSTRY TABS (Prompt 2.6) ── */
+.industry-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.industry-tab {
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-size: 14px;
+  color: var(--text-body);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.industry-tab:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.industry-tab.active,
+.industry-tab--active {
+  background: var(--primary) !important;
+  color: #fff !important;
+  border-color: var(--primary) !important;
+}
+
+.industry-content-card {
+  background: var(--bg-light-alt);
+  border-radius: var(--radius);
+  padding: 30px;
+}
+
+/* ── INDUSTRY ROWS (Prompt 3.1c) ── */
+.industry-row {
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  transition: var(--transition);
+}
+
+.industry-row:hover {
+  box-shadow: var(--shadow-sm);
+}
+
+.industry-row-name {
+  color: var(--primary);
+  font-size: 16px;
+  font-weight: 700;
+  min-width: 120px;
+}
+
+.industry-row-pain {
+  color: var(--text-secondary);
+  font-size: 13px;
+  flex: 1;
+}
+
+.industry-row-savings {
+  color: var(--success);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+/* ── NEWSLETTER CTA — DARK (Prompt 2.7) ── */
+.dark-section,
+.newsletter-dark-cta {
+  background: var(--bg-dark) !important;
+  color: #fff;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.dark-section h2,
+.newsletter-dark-cta h2 {
+  color: #fff !important;
+}
+
+.dark-section .subtitle {
+  color: var(--text-muted);
+}
+
+.dark-section .small-text {
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+
+/* ── EMAIL INPUT + BUTTON ROW ── */
+.email-signup-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.email-input,
+input[type="email"].email-input {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 12px 16px;
+  font-size: 15px;
+  width: 350px;
+  max-width: 100%;
+  outline: none;
+  transition: var(--transition);
+}
+
+.email-input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(13, 71, 161, 0.1);
+}
+
+/* ── ARTICLE CARDS (Prompt 2.8, 3.2) ── */
+.article-card {
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.article-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.article-card-image {
+  width: 100%;
+  height: 180px;
+  background: #E5E7EB;
+  object-fit: cover;
+}
+
+.article-card-body {
+  padding: 20px;
+}
+
+.article-card-tag {
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  border-radius: var(--radius-pill);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 10px;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.article-card-title {
+  color: var(--text-body);
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+.article-card-date {
+  color: var(--text-secondary);
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.article-card-excerpt {
+  color: var(--text-secondary);
+  font-size: 13px;
+  line-height: 1.5;
+  margin-bottom: 12px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.article-card-link {
+  color: var(--accent) !important;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.article-card-link:hover {
+  color: var(--accent-hover) !important;
+}
+
+/* ── FOUNDER / SOCIAL PROOF (Prompt 2.9) ── */
+.founder-section {
+  background: var(--bg-light);
+  padding: 60px 0;
+}
+
+.founder-photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: #E5E7EB;
+  margin: 0 auto 16px;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.founder-name {
+  color: var(--primary) !important;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.founder-title {
+  color: var(--text-secondary);
+  font-size: 13px;
+  text-align: center;
+}
+
+.trust-check-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 12px;
+  font-size: 15px;
+}
+
+.trust-check-icon {
+  color: var(--success);
+  font-size: 18px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.founder-stats {
+  display: flex;
+  gap: 24px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+
+.founder-stat {
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 16px;
+}
+
+/* ── FILTER BUTTONS (Prompt 3.1, 3.2) ── */
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.filter-btn {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 13px;
+  color: var(--text-body);
+  background: var(--bg-white);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.filter-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.filter-btn.active,
+.filter-btn--active {
+  background: var(--primary) !important;
+  color: #fff !important;
+  border-color: var(--primary) !important;
+}
+
+/* ── SEARCH INPUT (Prompt 3.1) ── */
+.search-input,
+input[type="text"].search-input {
+  width: 500px;
+  max-width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 15px;
+  outline: none;
+  margin: 0 auto 16px;
+  display: block;
+  transition: var(--transition);
+}
+
+.search-input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(13, 71, 161, 0.1);
+}
+
+/* ── TOGGLE PILLS (Prompt 3.1) ── */
+.toggle-pill {
+  background: var(--success-bg);
+  color: var(--success-text);
+  border-radius: var(--radius-pill);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 14px;
+  display: inline-block;
+}
+
+/* ── SIDEBAR CARDS (Prompt 3.1, 3.2) ── */
+.sidebar-card {
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.sidebar-card h3,
+.sidebar-card-heading {
+  color: var(--primary) !important;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.sidebar-card a {
+  display: block;
+  color: var(--primary);
+  font-size: 14px;
+  padding: 4px 0;
+}
+
+.sidebar-card a:hover {
+  color: var(--accent);
+}
+
+.sidebar-card-amber {
+  background: var(--warning-bg) !important;
+  border-color: var(--accent) !important;
+}
+
+/* ── PARTNER GRID CARDS (Prompt 3.1b) ── */
+.partner-card {
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  transition: var(--transition);
+}
+
+.partner-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.partner-logo-placeholder {
+  width: 60px;
+  height: 60px;
+  background: #E5E7EB;
+  border-radius: var(--radius);
+  margin-bottom: 12px;
+}
+
+.partner-card-name {
+  color: var(--text-body);
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.partner-card-desc {
+  color: var(--text-secondary);
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.partner-card-link {
+  color: var(--accent) !important;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* ── TAG PILLS ── */
+.tag-pill {
+  display: inline-block;
+  background: var(--bg-light);
+  color: var(--text-secondary);
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+  margin-right: 4px;
+  margin-bottom: 4px;
+}
+
+/* ── NEWSLETTER PAGE — COMPARISON (Prompt 3.3) ── */
+.plan-card {
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 30px;
+  text-align: center;
+}
+
+.plan-card--featured {
+  border: 2px solid var(--accent) !important;
+  position: relative;
+}
+
+.plan-card .plan-price {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 12px 0;
+}
+
+.plan-card ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.plan-card li {
+  padding: 6px 0;
+  font-size: 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+.plan-card li:last-child {
+  border-bottom: none;
+}
+
+.plan-badge {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--bg-dark);
+  font-size: 13px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+}
+
+/* ── PRODUCTS PAGE (Prompt 4.1) ── */
+.featured-product-card {
+  background: var(--bg-white);
+  border: 2px solid var(--accent);
+  border-radius: var(--radius-lg);
+  padding: 30px;
+  max-width: 700px;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.featured-product-price {
+  color: var(--accent);
+  font-size: 36px;
+  font-weight: 700;
+  margin: 12px 0;
+}
+
+.product-card {
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.product-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.product-card-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-body);
+  margin-bottom: 8px;
+}
+
+.product-card-price {
+  color: var(--accent);
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.product-card-count {
+  color: var(--text-secondary);
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+
+.discount-badge {
+  background: var(--warning-bg);
+  color: var(--warning-text);
+  border-radius: var(--radius-pill);
+  padding: 6px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+/* ── ABOUT PAGE (Prompt 4.2) ── */
+.editorial-card {
+  background: var(--bg-white);
+  border-radius: var(--radius);
+  padding: 20px;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.editorial-card:hover {
+  box-shadow: var(--shadow-sm);
+}
+
+.editorial-card-icon {
+  font-size: 32px;
+  color: var(--primary);
+  margin-bottom: 12px;
+}
+
+.editorial-card h3 {
+  color: var(--primary) !important;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.editorial-card p {
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+
+/* ── DISCLOSURE ── */
+.disclosure-badge,
+.affiliate-disclosure {
+  background: var(--warning-bg);
+  border: 1px solid var(--accent);
+  border-radius: var(--radius-sm);
+  padding: 8px 12px;
+  font-size: 11px;
+  color: var(--warning-text);
+  line-height: 1.5;
+}
+
+.disclosure-text {
+  font-size: 12px;
+  color: var(--text-secondary);
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* ── BLOG TEMPLATE — QUICK VERDICT (Prompt 5.1) ── */
+.verdict-card {
+  background: var(--bg-white);
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 24px;
+  margin: 24px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  align-items: center;
+}
+
+.verdict-score {
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--success);
+  line-height: 1;
+}
+
+.verdict-text {
+  font-size: 15px;
+  color: var(--text-body);
+}
+
+.verdict-ratings {
+  flex: 1;
+  min-width: 250px;
+}
+
+.verdict-rating-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+  font-size: 13px;
+}
+
+.verdict-rating-label {
+  min-width: 130px;
+  color: var(--text-secondary);
+}
+
+/* ── BLOG TEMPLATE — VS HERO (Prompt 5.2) ── */
+.vs-hero {
+  background: var(--bg-light);
+  border-radius: var(--radius-lg);
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin: 24px 0;
+  text-align: center;
+}
+
+.vs-divider {
+  color: var(--accent);
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.vs-tool-name {
+  color: var(--primary);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.winner-card {
+  background: var(--warning-bg);
+  border-radius: var(--radius);
+  padding: 20px;
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* ── BLOG TEMPLATE — SPECS TABLE ── */
+.specs-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.specs-table th {
+  background: var(--bg-light);
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 10px 16px;
+  text-align: left;
+  border-bottom: 2px solid var(--border);
+}
+
+.specs-table td {
+  padding: 10px 16px;
+  font-size: 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+.specs-table tr:hover {
+  background: var(--bg-light);
+}
+
+/* ── BLOG TEMPLATE — PROS/CONS ── */
+.pros-cons {
+  display: flex;
+  gap: 24px;
+  margin: 24px 0;
+  flex-wrap: wrap;
+}
+
+.pros-list,
+.cons-list {
+  flex: 1;
+  min-width: 250px;
+  padding: 20px;
+  border-radius: var(--radius);
+}
+
+.pros-list {
+  background: #F0FDF4;
+  border: 1px solid #BBF7D0;
+}
+
+.cons-list {
+  background: #FEF2F2;
+  border: 1px solid #FECACA;
+}
+
+.pros-list h3 {
+  color: var(--success) !important;
+}
+
+.cons-list h3 {
+  color: #EF4444 !important;
+}
+
+.pros-list li::marker {
+  color: var(--success);
+}
+
+.cons-list li::marker {
+  color: #EF4444;
+}
+
+/* ── BREADCRUMB (Prompt 5.1) ── */
+.breadcrumb {
+  color: var(--text-secondary);
+  font-size: 12px;
+  margin-bottom: 16px;
+}
+
+.breadcrumb a {
+  color: var(--text-secondary);
+}
+
+.breadcrumb a:hover {
+  color: var(--primary);
+}
+
+/* ── PAGINATION ── */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin: 40px 0;
+}
+
+.pagination a,
+.pagination span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 14px;
+  color: var(--text-body);
+  transition: var(--transition);
+}
+
+.pagination a:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.pagination .current {
+  background: var(--primary);
+  color: #fff !important;
+  border-color: var(--primary);
+}
+
+/* ── CONTACT FORM (Prompt 4.2) ── */
+.contact-form input,
+.contact-form textarea,
+.wpforms-field input,
+.wpforms-field textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 15px;
+  font-family: inherit;
+  transition: var(--transition);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.wpforms-field input:focus,
+.wpforms-field textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(13, 71, 161, 0.1);
+  outline: none;
+}
+
+.contact-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* ── FAQ SECTION (Prompt 5.1) ── */
+.faq-item {
+  border-bottom: 1px solid var(--border);
+  padding: 16px 0;
+}
+
+.faq-question {
+  color: var(--text-body);
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.faq-answer {
+  color: var(--text-secondary);
+  font-size: 14px;
+  margin-top: 8px;
+  line-height: 1.6;
+}
+
+/* ── FOOTER ── */
+footer,
+.site-footer,
+.elementor-section.footer-section {
+  background-color: var(--bg-dark) !important;
+  border-top: 3px solid var(--accent);
+  color: #fff;
+  padding: 40px 0;
+}
+
+footer a,
+.site-footer a {
+  color: var(--text-muted) !important;
+  font-size: 14px;
+}
+
+footer a:hover,
+.site-footer a:hover {
+  color: var(--accent) !important;
+}
+
+footer h3,
+.site-footer h3 {
+  color: #fff !important;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+/* ── SECTION UTILITIES ── */
+.section-white { background: var(--bg-white); padding: 60px 0; }
+.section-light { background: var(--bg-light); padding: 60px 0; }
+.section-dark  { background: var(--bg-dark); padding: 60px 0; color: #fff; }
+
+.section-heading {
+  color: var(--primary) !important;
+  font-size: 28px !important;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.section-subtitle {
+  color: var(--text-secondary);
+  font-size: 15px;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.text-center { text-align: center; }
+.text-accent { color: var(--accent); }
+.text-success { color: var(--success); }
+.text-muted { color: var(--text-secondary); }
+.font-bold { font-weight: 700; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .hero-heading {
+    font-size: 32px !important;
+  }
+
+  h1 { font-size: 28px; }
+  h2 { font-size: 22px; }
+
+  .vs-hero {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .email-input {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 { font-size: 24px; }
+  h2 { font-size: 20px; }
+
+  .hero-heading {
+    font-size: 26px !important;
+  }
+
+  .hero-stats {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .tool-card,
+  .article-card,
+  .product-card,
+  .partner-card {
+    padding: 16px;
+  }
+
+  .verdict-card {
+    flex-direction: column;
+  }
+
+  .pros-cons {
+    flex-direction: column;
+  }
+
+  .founder-stats {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .industry-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .search-input {
+    width: 100% !important;
+  }
+
+  .section-white,
+  .section-light,
+  .section-dark {
+    padding: 40px 0;
+  }
+
+  .featured-product-card {
+    padding: 20px;
+  }
+
+  .featured-product-price {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  body { font-size: 15px; }
+  h1 { font-size: 22px; }
+
+  .hero-heading {
+    font-size: 22px !important;
+  }
+
+  .hero-stat-number {
+    font-size: 24px;
+  }
+
+  .filter-buttons {
+    gap: 6px;
+  }
+
+  .filter-btn,
+  .industry-tab {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}
+
+/* ── ELEMENTOR OVERRIDES ── */
+.elementor-section.elementor-section-full_width {
+  max-width: 100%;
+}
+
+.elementor-widget-heading .elementor-heading-title {
+  line-height: 1.3;
+}
+
+/* Remove default Elementor button shadow */
+.elementor-button {
+  box-shadow: none !important;
+}
+
+/* Ensure 10Web doesn't override our font stack */
+.elementor-element {
+  font-family: 'Noto Sans TC', 'Inter', sans-serif;
+}
+  </style>
+  <style>
+    /* Preview-only layout helpers (not needed in WP) */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .grid-2 { display: grid; grid-template-columns: 60% 40%; gap: 40px; align-items: center; }
+    .grid-2-equal { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .grid-2-sidebar { display: grid; grid-template-columns: 30% 70%; gap: 40px; align-items: start; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    .flex-center { display: flex; justify-content: center; align-items: center; }
+    .flex-row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+    .mb-8 { margin-bottom: 8px; } .mb-12 { margin-bottom: 12px; } .mb-16 { margin-bottom: 16px; }
+    .mb-24 { margin-bottom: 24px; } .mb-32 { margin-bottom: 32px; } .mb-40 { margin-bottom: 40px; }
+    .img-placeholder { background: linear-gradient(135deg, #E5E7EB 0%, #D1D5DB 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #9CA3AF; font-size: 14px; }
+    .page-label { position: fixed; top: 10px; right: 10px; background: #0D47A1; color: #fff; padding: 8px 16px; border-radius: 6px; font-size: 12px; font-weight: 700; z-index: 9999; font-family: Inter, sans-serif; }
+    @media (max-width: 768px) {
+      .grid-2, .grid-2-equal, .grid-2-sidebar, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="page-label">PREVIEW — Homepage</div>
+
+<!-- ===== NAVIGATION ===== -->
+<nav style="background:#fff; padding: 16px 0; box-shadow: 0 1px 3px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000;">
+  <div class="container" style="display:flex; justify-content:space-between; align-items:center;">
+    <div style="font-size:20px; font-weight:700; color:#0D47A1;">AI Catalyst HK</div>
+    <div class="flex-row" style="gap:24px;">
+      <a href="#" style="font-size:14px; font-weight:500;">AI工具比較</a>
+      <a href="#" style="font-size:14px; font-weight:500;">最新資訊</a>
+      <a href="#" style="font-size:14px; font-weight:500;">電子報</a>
+      <a href="#" style="font-size:14px; font-weight:500;">提示詞商店</a>
+      <a href="#" style="font-size:14px; font-weight:500;">關於我們</a>
+      <a href="#" class="nav-cta-button">免費訂閱電子報</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== 2.1 TRUST BAR ===== -->
+<div class="trust-bar">
+  獨立評測，不受廣告商影響 · 75+ 工具深度評測 · 每週更新 · 聯盟披露
+</div>
+
+<!-- ===== 2.2 HERO ===== -->
+<section class="section-white">
+  <div class="container">
+    <div class="grid-2">
+      <div>
+        <div class="hero-eyebrow mb-8">香港No.1 AI工具評測平台</div>
+        <h1 class="hero-heading mb-8">人工貴、競爭大、乜都自己做？</h1>
+        <h1 class="hero-heading mb-16">AI工具幫你慳時間慳成本</h1>
+        <p class="hero-subtitle mb-24">獨立評測75+款AI工具 · 真實HKD定價 · 30分鐘上手攻略 · 每週更新</p>
+
+        <div class="hero-stats mb-24">
+          <div>
+            <div class="hero-stat-number">3,200+</div>
+            <div class="hero-stat-label">訂閱中小企主</div>
+          </div>
+          <div>
+            <div class="hero-stat-number">75+</div>
+            <div class="hero-stat-label">工具深度評測</div>
+          </div>
+          <div>
+            <div class="hero-stat-number">HKD 2.4M+</div>
+            <div class="hero-stat-label">為用家節省成本</div>
+          </div>
+        </div>
+
+        <a href="#" class="btn-accent mb-12" style="display:inline-block;">免費訂閱《AI實戰情報》</a>
+        <br>
+        <a href="#" style="color:#0D47A1; font-size:14px; font-weight:500;">查看精選工具評測 →</a>
+      </div>
+      <div>
+        <div class="img-placeholder" style="width:100%; height:360px;">Dashboard Illustration</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 2.3 BRAND PARTNERS ===== -->
+<section class="brand-partners">
+  <div class="container">
+    <div class="brand-partners-heading mb-16">精選合作AI工具品牌</div>
+    <div class="brand-partners-list">
+      Jasper AI · HubSpot · Surfer SEO · Copy.ai · Synthesia · Tidio · Semrush · Notion · n8n · Canva · Claude · Beehiiv
+    </div>
+  </div>
+</section>
+
+<!-- ===== 2.4 HOW IT WORKS ===== -->
+<section class="section-white">
+  <div class="container">
+    <h2 class="section-heading mb-8">老闆乜都自己做？我哋幫你 3 步搞掂</h2>
+    <p class="section-subtitle mb-40">香港中小企視角 · 100%獨立測試 · 真實使用場景</p>
+
+    <div class="grid-3">
+      <div class="step-card">
+        <div class="step-card-icon">&#128269;</div>
+        <h3>獨立實測 14 天</h3>
+        <p>我哋親自試用每款工具超過14天，用真實香港中小企業務場景測試。</p>
+      </div>
+      <div class="step-card">
+        <div class="step-card-icon">&#128202;</div>
+        <h3>5 維度客觀評分</h3>
+        <p>按功能、易用性、繁中支援、性價比、客服 5 個維度評分。</p>
+      </div>
+      <div class="step-card">
+        <div class="step-card-icon">&#127919;</div>
+        <h3>行業精準配對</h3>
+        <p>根據你嘅行業、員工人數、月度預算，配對最適合嘅AI工具。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 2.5 FEATURED TOOLS ===== -->
+<section class="section-light">
+  <div class="container">
+    <h2 class="section-heading mb-40">本週精選AI工具</h2>
+
+    <div class="grid-3">
+      <!-- Card 1 -->
+      <div class="tool-card">
+        <div class="tool-card-name">Jasper AI</div>
+        <span class="category-tag">AI寫作</span>
+        <div class="tool-rating" style="margin:8px 0;">&#9733;&#9733;&#9733;&#9733;&#9734; 4.6/5</div>
+        <div class="tool-card-description">最強AI寫作工具，繁中輸出流暢</div>
+        <div class="tool-card-price">HKD 390/月</div>
+        <div class="flex-row" style="gap:8px;">
+          <a href="#" class="btn-outline" style="font-size:13px; padding:8px 14px;">查看完整評測</a>
+          <a href="#" class="btn-accent" style="font-size:13px; padding:8px 14px;">立即試用 →</a>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="tool-card">
+        <div class="tool-card-name">HubSpot</div>
+        <span class="category-tag">AI CRM</span>
+        <div class="tool-rating" style="margin:8px 0;">&#9733;&#9733;&#9733;&#9733;&#9734; 4.5/5</div>
+        <div class="tool-card-description">中小企最佳免費CRM起步</div>
+        <div class="tool-card-price">免費起步</div>
+        <div class="flex-row" style="gap:8px;">
+          <a href="#" class="btn-outline" style="font-size:13px; padding:8px 14px;">查看完整評測</a>
+          <a href="#" class="btn-accent" style="font-size:13px; padding:8px 14px;">立即試用 →</a>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="tool-card">
+        <div class="tool-card-name">Surfer SEO</div>
+        <span class="category-tag">SEO</span>
+        <div class="tool-rating" style="margin:8px 0;">&#9733;&#9733;&#9733;&#9733;&#9734; 4.3/5</div>
+        <div class="tool-card-description">SEO內容優化，自動關鍵字建議</div>
+        <div class="tool-card-price">HKD 860/月</div>
+        <div class="flex-row" style="gap:8px;">
+          <a href="#" class="btn-outline" style="font-size:13px; padding:8px 14px;">查看完整評測</a>
+          <a href="#" class="btn-accent" style="font-size:13px; padding:8px 14px;">立即試用 →</a>
+        </div>
+      </div>
+      <!-- Card 4 -->
+      <div class="tool-card">
+        <div class="tool-card-name">Copy.ai</div>
+        <span class="category-tag">AI寫作</span>
+        <div class="tool-rating" style="margin:8px 0;">&#9733;&#9733;&#9733;&#9733;&#9734; 4.2/5</div>
+        <div class="tool-card-description">高佣金AI寫作，適合行銷團隊</div>
+        <div class="tool-card-price">HKD 390/月</div>
+        <div class="flex-row" style="gap:8px;">
+          <a href="#" class="btn-outline" style="font-size:13px; padding:8px 14px;">查看完整評測</a>
+          <a href="#" class="btn-accent" style="font-size:13px; padding:8px 14px;">立即試用 →</a>
+        </div>
+      </div>
+      <!-- Card 5 -->
+      <div class="tool-card">
+        <div class="tool-card-name">Synthesia</div>
+        <span class="category-tag">AI影片</span>
+        <div class="tool-rating" style="margin:8px 0;">&#9733;&#9733;&#9733;&#9733;&#9734; 4.5/5</div>
+        <div class="tool-card-description">AI人像視頻，無需拍攝</div>
+        <div class="tool-card-price">HKD 1,100/月</div>
+        <div class="flex-row" style="gap:8px;">
+          <a href="#" class="btn-outline" style="font-size:13px; padding:8px 14px;">查看完整評測</a>
+          <a href="#" class="btn-accent" style="font-size:13px; padding:8px 14px;">立即試用 →</a>
+        </div>
+      </div>
+      <!-- Card 6 -->
+      <div class="tool-card">
+        <div class="tool-card-name">Tidio</div>
+        <span class="category-tag">AI客服</span>
+        <div class="tool-rating" style="margin:8px 0;">&#9733;&#9733;&#9733;&#9733;&#9734; 4.1/5</div>
+        <div class="tool-card-description">AI聊天客服，WhatsApp整合</div>
+        <div class="tool-card-price">免費起步</div>
+        <div class="flex-row" style="gap:8px;">
+          <a href="#" class="btn-outline" style="font-size:13px; padding:8px 14px;">查看完整評測</a>
+          <a href="#" class="btn-accent" style="font-size:13px; padding:8px 14px;">立即試用 →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 2.6 INDUSTRY TABS ===== -->
+<section class="section-white">
+  <div class="container">
+    <h2 class="section-heading mb-8">按行業探索AI工具組合</h2>
+    <p class="section-subtitle mb-32">點擊你的行業，查看推薦AI工具 + 政府資助參考</p>
+
+    <div class="industry-tabs mb-24">
+      <div class="industry-tab active">金融科技</div>
+      <div class="industry-tab">餐飲</div>
+      <div class="industry-tab">零售</div>
+      <div class="industry-tab">進出口貿易</div>
+      <div class="industry-tab">專業服務</div>
+      <div class="industry-tab">教育</div>
+      <div class="industry-tab">地產</div>
+      <div class="industry-tab">物流</div>
+      <div class="industry-tab">美容健身</div>
+      <div class="industry-tab">初創公司</div>
+    </div>
+
+    <div class="industry-content-card">
+      <p style="font-weight:700; margin-bottom:8px;">你的痛點：人手不足、WhatsApp接單混亂、食材成本管理難</p>
+      <p style="margin-bottom:8px;">推薦工具：Tidio (AI客服)、n8n (自動化)、Canva (餐牌設計)、HubSpot (CRM)</p>
+      <p style="color:#10B981; font-weight:700; margin-bottom:8px;">每月可節省：HK$8,000 - 25,000</p>
+      <p style="margin-bottom:16px;">適用資助：BUD基金 + DTSPP</p>
+      <a href="#" class="btn-accent" style="font-size:14px; padding:10px 20px;">查看完整行業方案 →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 2.7 NEWSLETTER CTA (DARK) ===== -->
+<section class="section-dark">
+  <div class="container text-center">
+    <p style="color:#6B7280; font-size:13px; margin-bottom:8px;">每週一封，免費訂閱</p>
+    <h2 style="color:#fff !important; font-size:30px; font-weight:700; margin-bottom:12px;">《AI實戰情報》電子報</h2>
+    <p style="color:#9CA3AF; font-size:15px; margin-bottom:24px;">每期包含：本週AI大事 · 深度分析 · 工具評測 · 即用提示詞</p>
+
+    <div class="email-signup-row">
+      <input type="email" class="email-input" placeholder="輸入你的電郵">
+      <button class="btn-accent" style="border:none; cursor:pointer;">立即免費訂閱</button>
+    </div>
+
+    <p style="color:#6B7280; font-size:12px; margin-top:12px;">
+      已有 3,200+ 香港中小企主訂閱 | 每週一發送 | 隨時退訂
+    </p>
+  </div>
+</section>
+
+<!-- ===== 2.8 LATEST ARTICLES ===== -->
+<section class="section-white">
+  <div class="container">
+    <h2 class="section-heading mb-40">最新AI工具評測 + 攻略</h2>
+
+    <div class="grid-3">
+      <div class="article-card">
+        <div class="img-placeholder article-card-image">Image</div>
+        <div class="article-card-body">
+          <span class="article-card-tag">工具評測</span>
+          <div class="article-card-title">ChatGPT 實測評價 2026：香港中小企值唔值得用？</div>
+          <div class="article-card-date">2026-03-20</div>
+          <div class="article-card-excerpt">深度測試 ChatGPT 在香港中小企場景下的實用性，包括繁體中文輸出質素、定價分析...</div>
+          <a href="#" class="article-card-link">閱讀完整評測 →</a>
+        </div>
+      </div>
+      <div class="article-card">
+        <div class="img-placeholder article-card-image">Image</div>
+        <div class="article-card-body">
+          <span class="article-card-tag">工具比較</span>
+          <div class="article-card-title">Jasper AI vs Copy.ai：香港中小企哪個更值得？</div>
+          <div class="article-card-date">2026-03-18</div>
+          <div class="article-card-excerpt">兩款 AI 寫作工具正面對決，比較功能、繁中支援、HKD 定價及適用場景...</div>
+          <a href="#" class="article-card-link">閱讀完整評測 →</a>
+        </div>
+      </div>
+      <div class="article-card">
+        <div class="img-placeholder article-card-image">Image</div>
+        <div class="article-card-body">
+          <span class="article-card-tag">精選清單</span>
+          <div class="article-card-title">2026 最佳 AI CRM 工具 Top 5：HubSpot 居首</div>
+          <div class="article-card-date">2026-03-15</div>
+          <div class="article-card-excerpt">精選 5 款最適合香港中小企的 AI CRM 工具，從免費到付費方案全面比較...</div>
+          <a href="#" class="article-card-link">閱讀完整評測 →</a>
+        </div>
+      </div>
+      <div class="article-card">
+        <div class="img-placeholder article-card-image">Image</div>
+        <div class="article-card-body">
+          <span class="article-card-tag">使用教學</span>
+          <div class="article-card-title">n8n 自動化教學：3步設定WhatsApp自動回覆</div>
+          <div class="article-card-date">2026-03-12</div>
+          <div class="article-card-excerpt">手把手教你用 n8n 建立 WhatsApp 自動回覆工作流，零代碼即可上手...</div>
+          <a href="#" class="article-card-link">閱讀完整評測 →</a>
+        </div>
+      </div>
+      <div class="article-card">
+        <div class="img-placeholder article-card-image">Image</div>
+        <div class="article-card-body">
+          <span class="article-card-tag">工具評測</span>
+          <div class="article-card-title">Surfer SEO 評測：SEO新手30分鐘上手攻略</div>
+          <div class="article-card-date">2026-03-10</div>
+          <div class="article-card-excerpt">實測 Surfer SEO 嘅內容優化功能，睇吓佢點樣幫你提升 Google 排名...</div>
+          <a href="#" class="article-card-link">閱讀完整評測 →</a>
+        </div>
+      </div>
+      <div class="article-card">
+        <div class="img-placeholder article-card-image">Image</div>
+        <div class="article-card-body">
+          <span class="article-card-tag">行業分析</span>
+          <div class="article-card-title">AI工具慳錢攻略：每月慳 HK$15,000 的方法</div>
+          <div class="article-card-date">2026-03-08</div>
+          <div class="article-card-excerpt">分析 10 個行業如何透過 AI 工具組合每月節省 HK$8,000 至 HK$60,000...</div>
+          <a href="#" class="article-card-link">閱讀完整評測 →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center" style="margin-top:32px;">
+      <a href="#" class="btn-outline-amber" style="padding:12px 28px;">查看所有評測文章 →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 2.9 SOCIAL PROOF / FOUNDER ===== -->
+<section class="founder-section">
+  <div class="container">
+    <div class="grid-2-sidebar">
+      <div class="text-center">
+        <div class="founder-photo img-placeholder" style="width:200px; height:200px; border-radius:50%; margin:0 auto 16px;">Photo</div>
+        <div class="founder-name">Tik SO</div>
+        <div class="founder-title">蘇駿迪 · 創辦人及主編</div>
+      </div>
+      <div>
+        <h2 style="font-size:24px; margin-bottom:20px;">為什麼 3,200+ 香港中小企主信任我哋？</h2>
+
+        <div class="trust-check-item">
+          <span class="trust-check-icon">&#10003;</span>
+          <span><strong>100% 獨立評測</strong> — 不接受任何工具品牌贊助影響評分</span>
+        </div>
+        <div class="trust-check-item">
+          <span class="trust-check-icon">&#10003;</span>
+          <span><strong>真實香港視角</strong> — HKD定價、繁體中文、本地使用場景測試</span>
+        </div>
+        <div class="trust-check-item">
+          <span class="trust-check-icon">&#10003;</span>
+          <span><strong>每週持續更新</strong> — 75+ 工具數據每週更新</span>
+        </div>
+        <div class="trust-check-item">
+          <span class="trust-check-icon">&#10003;</span>
+          <span><strong>AI自動化驅動</strong> — 用我哋推薦嘅工具建立成個內容系統</span>
+        </div>
+
+        <div class="founder-stats">
+          <div class="founder-stat">75+ 工具評測</div>
+          <div class="founder-stat">156 篇文章</div>
+          <div class="founder-stat">3,200+ 訂閱者</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="container">
+    <div class="grid-3" style="padding:20px 0;">
+      <div>
+        <h3>AI Catalyst HK</h3>
+        <p style="color:#9CA3AF; font-size:14px; margin-bottom:16px;">香港中小企 AI 工具實戰情報</p>
+        <div class="flex-row" style="gap:12px;">
+          <a href="#" style="color:#9CA3AF; font-size:18px;">&#x1F517; LinkedIn</a>
+          <a href="#" style="color:#9CA3AF; font-size:18px;">&#x1F517; Facebook</a>
+          <a href="#" style="color:#9CA3AF; font-size:18px;">&#x1F517; Instagram</a>
+        </div>
+      </div>
+      <div>
+        <h3>快速連結</h3>
+        <a href="#">首頁</a>
+        <a href="#">AI工具比較</a>
+        <a href="#">最新資訊</a>
+        <a href="#">電子報</a>
+        <a href="#">提示詞商店</a>
+        <a href="#">關於我們</a>
+      </div>
+      <div>
+        <h3>法律資訊</h3>
+        <a href="#">編輯政策</a>
+        <a href="#">聯盟披露</a>
+        <a href="#">私隱政策</a>
+      </div>
+    </div>
+    <div style="border-top:1px solid #374151; padding-top:16px; margin-top:16px; text-align:center;">
+      <p style="color:#6B7280; font-size:12px;">&copy; 2026 AI Catalyst HK. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

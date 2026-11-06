@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Catalyst HK — Newsletter Page Preview</title>
+  <link rel="stylesheet" href="brand-css-v3.1.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .grid-2-newsletter { display: grid; grid-template-columns: 55% 45%; gap: 40px; align-items: center; }
+    .grid-2-equal { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .flex-row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+    .mb-8 { margin-bottom: 8px; } .mb-12 { margin-bottom: 12px; } .mb-16 { margin-bottom: 16px; }
+    .mb-24 { margin-bottom: 24px; } .mb-32 { margin-bottom: 32px; }
+    .img-placeholder { background: linear-gradient(135deg, #E5E7EB 0%, #D1D5DB 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #9CA3AF; font-size: 14px; }
+    .page-label { position: fixed; top: 10px; right: 10px; background: #0D47A1; color: #fff; padding: 8px 16px; border-radius: 6px; font-size: 12px; font-weight: 700; z-index: 9999; font-family: Inter, sans-serif; }
+    @media (max-width: 768px) {
+      .grid-2-newsletter, .grid-2-equal, .grid-3 { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="page-label">PREVIEW — /newsletter/</div>
+
+<!-- ===== SECTION 1: HERO + SIGNUP ===== -->
+<section class="section-white">
+  <div class="container">
+    <div class="grid-2-newsletter">
+      <!-- LEFT -->
+      <div>
+        <h1 style="font-size:28px; margin-bottom:12px;">《AI實戰情報》— 香港唯一繁體中文AI電子報</h1>
+        <p style="color:#6B7280; font-size:15px; margin-bottom:24px;">每週精選AI工具評測 + 實戰攻略，專為香港中小企而設</p>
+
+        <div class="trust-check-item"><span class="trust-check-icon">&#10003;</span><span>每週精選3-5款AI工具深度分析</span></div>
+        <div class="trust-check-item"><span class="trust-check-icon">&#10003;</span><span>真實HKD定價及使用成本計算</span></div>
+        <div class="trust-check-item"><span class="trust-check-icon">&#10003;</span><span>行業實戰案例及ROI估算</span></div>
+        <div class="trust-check-item"><span class="trust-check-icon">&#10003;</span><span>獨家折扣碼及限時優惠</span></div>
+        <div class="trust-check-item"><span class="trust-check-icon">&#10003;</span><span>繁體中文AI提示詞範本</span></div>
+
+        <p style="color:#10B981; font-weight:700; margin-top:20px;">已有 3,200+ 香港中小企主訂閱</p>
+      </div>
+
+      <!-- RIGHT: Signup Card -->
+      <div style="background:#F3F4F6; border-radius:12px; padding:40px; text-align:center;">
+        <h2 style="margin-bottom:20px;">免費訂閱</h2>
+        <input type="email" class="email-input" style="width:100%; margin-bottom:12px;" placeholder="你的電郵地址">
+        <button class="btn-accent" style="width:100%; border:none; cursor:pointer; padding:14px; font-size:16px;">立即免費訂閱</button>
+        <p style="color:#6B7280; font-size:13px; margin-top:12px;">免費開始，隨時退訂</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 2: FREE vs PAID ===== -->
+<section class="section-light">
+  <div class="container">
+    <h2 class="section-heading mb-32">免費版 vs 付費版</h2>
+
+    <div class="grid-2-equal" style="max-width:800px; margin:0 auto;">
+      <!-- Free -->
+      <div class="plan-card">
+        <h3 style="margin-bottom:8px;">免費版</h3>
+        <div class="plan-price" style="color:#1F2937;">HK$0</div>
+        <ul style="margin:20px 0;">
+          <li>每週一期</li>
+          <li>工具摘要</li>
+          <li>每週1個推薦</li>
+          <li>基本提示詞</li>
+        </ul>
+        <a href="#" class="btn-outline" style="display:block; text-align:center; padding:12px;">免費訂閱</a>
+      </div>
+
+      <!-- Paid -->
+      <div class="plan-card plan-card--featured">
+        <h3 style="margin-bottom:8px;">付費版</h3>
+        <span class="plan-badge" style="margin-bottom:8px; display:inline-block;">HK$68/月</span>
+        <div class="plan-price" style="color:#F59E0B;">HK$68<span style="font-size:14px; color:#6B7280;">/月</span></div>
+        <ul style="margin:20px 0;">
+          <li>每日發送</li>
+          <li>完整分析報告</li>
+          <li>每日3-5個推薦</li>
+          <li>獨家WhatsApp群</li>
+          <li>數碼產品8折</li>
+          <li>優先回覆</li>
+        </ul>
+        <a href="#" class="btn-accent" style="display:block; text-align:center; padding:12px; border:none;">升級付費版</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 3: CONTENT PREVIEW ===== -->
+<section class="section-white">
+  <div class="container">
+    <h2 class="section-heading mb-32">電子報內容預覽</h2>
+
+    <div class="grid-3">
+      <div class="article-card">
+        <div class="img-placeholder" style="height:180px;">Issue #42 Preview</div>
+        <div class="article-card-body">
+          <div class="article-card-title">第42期：ChatGPT 4.5 重磅更新</div>
+          <div class="article-card-date">2026-03-17</div>
+          <div class="article-card-excerpt">本期精選：ChatGPT 新功能對香港中小企意味著什麼？附3個即用提示詞...</div>
+        </div>
+      </div>
+      <div class="article-card">
+        <div class="img-placeholder" style="height:180px;">Issue #41 Preview</div>
+        <div class="article-card-body">
+          <div class="article-card-title">第41期：5款免費AI工具推薦</div>
+          <div class="article-card-date">2026-03-10</div>
+          <div class="article-card-excerpt">零成本起步！本期推薦5款完全免費的AI工具，適合預算有限的初創公司...</div>
+        </div>
+      </div>
+      <div class="article-card">
+        <div class="img-placeholder" style="height:180px;">Issue #40 Preview</div>
+        <div class="article-card-body">
+          <div class="article-card-title">第40期：AI客服工具大比拼</div>
+          <div class="article-card-date">2026-03-03</div>
+          <div class="article-card-excerpt">Tidio vs Intercom vs Zendesk AI — 哪個最適合香港零售店？...</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
